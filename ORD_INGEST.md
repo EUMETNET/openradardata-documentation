@@ -90,7 +90,23 @@ curl -X 'POST' \
     - ``unit``: '%'
     - ``size``: '1'
     - ``encoding``: 'utf-8'
-
-
-
-
+11. ``links``:
+    - add general link for your institution, or API:
+        ```json
+        {
+            "href": "https://en.ilmatieteenlaitos.fi/radar-data-on-aws-s3",
+            "rel": "service-desc",
+            "type": "application/geo+json",
+            "hreflang": "en",
+            "title": "FMI Radar Data on AWS"
+        }
+        ```
+    - for the direct data access add at least one link with the ``item`` or ``items`` property. For exanple:
+        ```json
+        {
+            "href": "https://rgw.met.no/f6e82026a94d490aba8481274757556e:stacapi-radar-production/Mosaic-Norway-v1/2025/10/15/norway_pcappi_class-dbz-1000_202510151035.tiff",
+            "rel": "item",
+            "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+            "title": "Data"
+        }
+        ```
