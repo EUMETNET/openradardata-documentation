@@ -26,7 +26,7 @@ The [ORD Ingestion API](https://radar.meteogate.eu/ingest/docs) includes three e
 
 ![JSON Endpoint](source/images/ORD_Ingest_JSON_endpoint.png)
 
-#### Swagget UI Usage:
+#### Swagger UI Usage:
 1. Klick to "Try it out" button
 2. Insert your schema to the textbox
 3. Klick to Execute button, and return- code 200 means "Succesfully ingested" 
@@ -58,12 +58,16 @@ curl -X 'POST' \
 [Openradardata-validator](https://github.com/EUMETNET/openradardata-validator) includes a JSON message generator for creating custom ``json_upload_schema`` files and a validator script to verify the schema. The message generator creates distinct JSON schemas for each quantity at each level. Generate your schema(s) and customise it.
 
 ## Make the upload schema manually
+Scroll down and check the properties in the Schemas box.
+ 
+![API INGEST](source/images/ORD_Properties.png)
+
 1. ``coordinates``:
     - Single site: use site coordinates
     - Composite: use the central(math average) point coordinates. (Corner coordinates TBD) 
 2. ``platform``:
     - Single site data: use the existing Wigos Id of radar
-    - Composite data: dgenerate a unique id for your each grid, for example: 0-578-0-S_Norway_Comp_v1 , where:
+    - Composite data: generate a unique id for your each grid, for example: 0-578-0-S_Norway_Comp_v1 , where:
         - 578: Norway ISO country code
         - S_Norway_Comp_v1: unique ID. Max length 16, the use of '-' character is not allowed.
 3. ``license``:  https://creativecommons.org/licenses/by/4.0/ (for example)
