@@ -1,7 +1,9 @@
----
-## Data Sharing with Ingest API
 
-The ORD ingestion API includes three endpoints for sharing data:
+## Data Sharing with ORD Ingest API
+
+The [ORD Ingestion API](https://radar.meteogate.eu/ingest/docs) includes three endpoints for sharing data:
+
+![Ingest Endpoints](source/images/ORD_Ingest_endpoints.png)
 
 ### 1. BUFR Endpoint
 - Used for uploading and sharing **BUFR files**.
@@ -22,15 +24,73 @@ The ORD ingestion API includes three endpoints for sharing data:
 - For **National Meteorological Services (NMSs) to provide national products** via ORD
 - Users provide radar metadata through the JSON endpoint.
 
+![JSON Endpoint](source/images/ORD_Ingest_JSON_endpoint.png)
 
-**[Openradardata-validator](https://github.com/EUMETNET/openradardata-validator)** includes a JSON message generator for creating custom `json_upload_schema` files and a validator script to verify the schema. The message generator creates distinct JSON schemas for each quantity at each level.
+#### Swagget UI Usage:
+1. Klick to "Try it out" button
+2. Insert your schema to the textbox
+3. Klick to Execute button, and return- code 200 means "Succesfully ingested" 
 
----
+![Ingest Success](source/images/ORD_Ingest_Success.png)
 
-### Ingest API Use Cases
+Error: ``platform`` missing
 
-The **Ingest API** is designed for uploading and processing radar data files. It supports the ingestion of **ODIM** and **BUFR** data formats as well as local file references via JSON.
+![Ingest Error](source/images/ORD_Ingest_Error.png)
 
-Examples: TBD
+#### Command line ingest:
+```bash
+curl -X 'POST' \
+  'https://radar.meteogateeu/ingest/json?publishWIS2=false' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": "",
+  "version": "v4.0",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": {.....
+    ...}'
+```
+
+
+## Generate and validate ingest schema with [openradardata-validator](https://github.com/EUMETNET/openradardata-validator)
+[Openradardata-validator](https://github.com/EUMETNET/openradardata-validator) includes a JSON message generator for creating custom ``json_upload_schema`` files and a validator script to verify the schema. The message generator creates distinct JSON schemas for each quantity at each level. Generate your schema(s) and customise it.
+
+## Make the upload schema manually
+1. ``coordinates``:
+    - Single site: use site coordinates
+    - Composite: use the central(math average) point coordinates. (Corner coordinates TBD) 
+2. ``platform``:
+    - Single site data: use the existing Wigos Id of radar
+    - Composite data: dgenerate a unique id for your each grid, for example: 0-578-0-S_Norway_Comp_v1 , where:
+        - 578: Norway ISO country code
+        - S_Norway_Comp_v1: unique ID. Max length 16, the use of '-' character is not allowed.
+3. ``license``:  https://creativecommons.org/licenses/by/4.0/ (for example)
+4. ``level``: Use ODIM product parameter(if exists) or 0
+    - PVOL, SCAN, PPI: elevation
+    - Composite: product parameter
+    - CAPPI, PCAPPI: 'Layer height above the radar
+    - ETOP, EBASE: Reflectivity level threshold
+    - RHI: Azumuth angle
+    - VIL: Top heights of the integration layer
+5. ``function``: point
+6. datetime, two allowed options:
+    - ``start_datetime`` and ``end_datetime``: format example: '2025-10-14T07:55:00Z'
+    - ``datetime`` and ``period``: ``datetime`` is the ``end_datetime``. The period in ISO8601 duration format, for example: 
+        - 'PT30S': 30 second
+        - 'PT45M': 45 minutes
+        - 'PT1H': one hour
+7. ``format``: BUFR, ODIM, GeoTIFF
+8. ``radar_meta``: set the ODIM attributes, including the image corner coordinates
+9. ``hamsl``: height of station
+10. ``content``:
+    - ``value``: 0
+    - ``standard_name``: ODIM quantity
+    - ``unit``: '%'
+    - ``size``: '1'
+    - ``encoding``: 'utf-8'
+
+
 
 

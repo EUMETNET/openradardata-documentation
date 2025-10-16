@@ -1,12 +1,12 @@
-## Data Retrieval with ORD API
+## Data Retrieval with Open Radar Data  API
 
-### Open Radar API Examples
+### ORD API Examples
 
-The **Open Radar API** is ideal for retrieving and integrating radar data into various workflows. Here are some examples:
+The **Open Radar Data API** is ideal for retrieving and integrating radar data into various workflows. Here are some examples:
 
 1. **Single site:**
    - Retrieve single site(Hurum, Norway) radar intensity data(DBZH) in ODIM format for specific time range(2025-10-13T12:10Z/2025-10-13T12:40Z) and elevations lower than 5&deg;:
-        1. Open [ORD API](https://radar.meteogate.eu/api/docs) and select: collections/observations/localtions/{location_id}
+        1. Open [ORD API Swagger UI](https://radar.meteogate.eu/api/docs) and select: collections/observations/localtions/{location_id}
         2. Click to "Try it out" button and set the query parameters:
         3. ``location_id``: 0-20000-0-01498
         4. ``parameter-name``: leave blank, set it below separately(standard_name:level:*:*)
