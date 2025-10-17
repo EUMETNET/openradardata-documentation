@@ -77,7 +77,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
         1. ``location_id``: 0-246-\*-\*
 
 2. **OPERA composite products:**
-   - Fetch composite data for OPERA production
+   - Fetch composite product from OPERA production
         1. ``standard_name``: RATE or ACRR or MAX
 
    - OPERA products:
