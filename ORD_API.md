@@ -4,7 +4,7 @@
 
 The **Open Radar Data API** is ideal for retrieving and integrating radar data into various workflows. Here are some examples:
 
-1. **Single site:**
+1. **OPERA single site volume radar data:**
    - Retrieve single site (Hurum, Norway) radar intensity data (DBZH) in ODIM format for specific time range (2025-10-13T12:10Z/2025-10-13T12:40Z) and elevations lower than 5&deg;:
         1. Open [ORD API Swagger UI](https://radar.meteogate.eu/api/docs) and select: collections/observations/localtions/{location_id}
         2. Click to "Try it out" button and set the query parameters:
@@ -76,24 +76,24 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
    - Retrieve all Finnish data.
         1. ``location_id``: 0-246-\*-\*
 
-2. **Composites:**
+2. **OPERA composite products:**
    - Use radar precipitation data for hydrological modeling and flood prediction.
-        1. ``standard_name``: RATE or ACRR
+        1. ``standard_name``: RATE or ACRR or MAX
 
    - OPERA products:
         1. ``location_id``: 0-\*-\*-OPERA
 
    - Query GeoTIFF format:
-        1. ``format``: GeoTIFF
+        1. ``format``: GeoTIFF or HDF5
 
-3. **Observation items:**
-   - Retrieve german sites from boundary box area (-5.5,18.0,72.0,82.1) where radar intensity data(TH) is available in ODIM format for specific time range(2025-10-13T12:10Z/2025-10-13T12:40Z):
+3. ** Select observation items:**
+   - Retrieve German sites from boundary box area (-5.5,18.0,72.0,82.1) where raw radar reflectivity data (TH) is available in ODIM format for specific time range (2025-10-13T12:10Z/2025-10-13T12:40Z):
         1. Open [ORD API](https://radar.meteogate.eu/api/docs) and select: collections/observations/items
         2. Click to "Try it out" button and set the query parameters:
         3. ``bbox``: -5.5,18.0,72.0,82.1
         4. ``datetime``: 2025-10-13T12:10Z/2025-10-13T12:40Z
         5. ``id``: leave blank
-        6. ``parameter-name``: leave blank, set it below separately(standard_name:level:*:*)
+        6. ``parameter-name``: leave blank, set it below separately (standard_name:level:*:*)
         7. ``naming_authority``: de.dwd
         8. ``institution``, ``platform``: leave blank
         9. ``standard_name``: TH
