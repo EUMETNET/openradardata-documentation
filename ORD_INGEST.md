@@ -7,21 +7,21 @@ The [ORD Ingestion API](https://radar.meteogate.eu/ingest/docs) includes three e
 
 ### 1. BUFR Endpoint
 - Used for uploading and sharing **BUFR files**.
-- For **OPERA to ingest the European single site data** to European Weather Cloud S3 storage
+- For **OPERA production to ingest the European single site data** to European Weather Cloud S3 storage
 - The ingester module:
   - Extracts metadata from BUFR files and stores it in the database.
   - Uploads the original (or renamed) BUFR file to the ORD S3 bucket.
 
 ### 2. ODIM Endpoint
-- Processes **ODIM files**.
-- For **OPERA to ingest the European single site data and OPERA composites** to European Weather Cloud S3 storage
+- Processes **ODIM files in HDF5**.
+- For **OPERA production to ingest the European single site data and OPERA composites** to European Weather Cloud S3 storage
 - The ingester module:
   - Extracts metadata from ODIM files and stores it in the database.
   - Uploads the original (or renamed) ODIM file to the ORD S3 bucket.
 
 ### 3. JSON Endpoint
 - Enables sharing **locally stored radar data**.
-- For **National Meteorological Services (NMSs) to provide national products** via ORD
+- For **EUMETNET National Meteorological Services (NMSs) to provide national products** via ORD
 - Users provide radar metadata through the JSON endpoint.
 
 ![JSON Endpoint](source/images/ORD_Ingest_JSON_endpoint.png)
