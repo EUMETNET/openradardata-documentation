@@ -77,14 +77,14 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
         1. ``location_id``: 0-246-\*-\*
 
 2. **OPERA composite products:**
-   - Use radar precipitation data for hydrological modeling and flood prediction.
+   - Fetch composite data for OPERA production
         1. ``standard_name``: RATE or ACRR or MAX
 
    - OPERA products:
         1. ``location_id``: 0-\*-\*-OPERA
 
    - Query GeoTIFF format:
-        1. ``format``: GeoTIFF or ODIM
+        1. ``format``: ODIM
 
 3. ** Select observation items:**
    - Retrieve German sites from boundary box area (-5.5,18.0,72.0,82.1) where raw radar reflectivity data (TH) is available in ODIM format for specific time range (2025-10-13T12:10Z/2025-10-13T12:40Z):
