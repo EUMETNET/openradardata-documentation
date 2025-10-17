@@ -1,5 +1,5 @@
 
-## Data Sharing with ORD Ingest API
+## Data Sharing with ORD Ingest API (For EUMETNET Members only)
 
 The [ORD Ingestion API](https://radar.meteogate.eu/ingest/docs) includes three endpoints for sharing data:
 
