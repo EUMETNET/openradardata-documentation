@@ -83,7 +83,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
    - OPERA products:
         1. ``location_id``: 0-\*-\*-OPERA
 
-   - Query GeoTIFF format:
+   - Query ODIM format:
         1. ``format``: ODIM
 
 3. ** Select observation items:**
