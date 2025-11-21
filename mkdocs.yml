@@ -1,0 +1,26 @@
+site_name: Open Radar Data documentation
+site_description: Guidance and instructions for Open Radar Data users
+site_author: EUMETNET
+repo_url: https://github.com/EUMETNET/openradardata-documentation
+theme:
+  name: material
+  language: en
+  logo: images/meteogate-logo.svg
+  palette:
+    primary: black
+    accent: indigo
+  font:
+    text: Open Sans
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - HOME: 1.md
+  - 1. OVERVIEW: 2.md
+  - 2. DISCOVERING AND ACCESSING DATA: 3.md
