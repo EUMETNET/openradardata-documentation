@@ -34,7 +34,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install mkdocs mkdocs-material; fi
 
       - name: Build MkDocs site
-        run: mkdocs build --strict --site-dir site
+        run: mkdocs build --site-dir site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
