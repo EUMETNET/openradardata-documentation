@@ -32,6 +32,8 @@ There are three types of data available via ORD.
 5. Public Meteogate API available via [meteo gateway](https://api.meteogate.eu/ord/edr)
 6. [ORD S3 24h cache](https://s3.waw3-1.cloudferro.com/openradar-24h/)
 7. [ORD S3 Archive](https://s3.waw3-1.cloudferro.com/openradar-archive/) TBD
+8. [Python real-time download script example](examples/ord_dl_example/)
+
    
 
 ## Contacts
