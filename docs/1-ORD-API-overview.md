@@ -1,1 +1,72 @@
+# 1. Overview
+The RODEO project develops a user interface and Application Programming Interfaces (API) for accessing meteorological datasets declared as High Value Datasets (HVD) by the EU Implementing Regulation (EU) 2023/138 under the EU Open Data Directive (EU) 2019/1024. The project also fosters the engagement between data providers and data users for enhancing the understanding of technical solutions being available for sharing and accessing the HVD datasets. This project provides a sustainable and standardized system for sharing real-time surface weather observations in line with the HVD regulation and WMO WIS 2.0 strategy. 
+
+Via Open Radar Data (ORD) API, data from European weather radars will be made available through open web services, so that they can be accessed by anyone. The development and implementation of ORD API is part of the RODEO project. The goal for this project is to make near real-time weather radar data easily available. The data will be published on both a message queue using MQTT and trough an OGC-EDR API. Search metadata will be made available through the global discovery catalog developed and managed through MeteoGate Services developed in WP2. The system architecture is portable, scalable and modular for considering possible future extensions to existing networks and datasets.
+
+---
+
+## 1.1 Dataset description
+In this section we describe the datasets that are planned to be supplied by the RODEO developed APIs. In short, these are stated in Table 1.
+### OPERA Composites Data (ODYSSEY, CIRRUS, NIMBUS)
+The composites cover the whole of Europe (area: 3,800 × 4,400 km2) in a Lambert Equal Area projection with approx. corner coordinates: (70 N 30 W), (70N 50E), (32N 15W), and (32 N 30E). In ODYSSEY production covering years of 01/2011- 10/2024, the composites are all updated every 15 minutes and issued ca. 15 minutes after data time with 2 x 2 km resolution. The example image of ODYSSEY maximum reflectivity composite is shown in Figure 1. In the new production (07/2024 -) the CIRRUS products are with higher spatial resolution of 1 x 1 km and update cycle of 5 minutes. The composite products are based on incoming polar scans and volumes of filtered reflectivity.
+
+There are three products on offer from the OPERA suite of products:
+
+**OPERA Instantaneous Maximum Reflectivity (in dBZ)** 
+•	In the maximum reflectivity composite each composite pixel contains the maximum of all polar cell values of the contributing radars at that location.
+•	ODYSSEY production 2012-10/2024 and CIRRUS production 07/2024 –
+
+**OPERA Instantaneous Surface Rain rate composite (in mm/h)** 
+•	ODYSSEY production 2012-10/2024 and NIMBUS production 07/2024 -
+•	In the ODYSSEY rain rate composite, each composite pixel is a weighted average of the valid pixels of the contributing radars, weighted by a quality index, the distance from center of the pixel and an exponential index related to inverse of the beam altitude. Whereas in NIMBUS production the compositing algorithm is based on the lowest elevation angle only.
+•	Measured reflectivity values are converted to rainfall (mm/h) using the Marshall-Palmer equation.
+
+**OPERA One Hour rainfall Accumulation (in mm)** 
+•	Rainfall accumulation is the sum of the previous four 15-minute rain-rate products.
+•	ODYSSEY production 2012-10/2024 and NIMBUS production 07/2024 -
+
+Four quality filters are applied to the OPERA incoming volume data prior to compositing (Saltikoff et al. 2019). The data sharing model used in OPERA is an in-house developed ODIM (OPERA Data Information Model) both in BUFR and HDF5 for older production, solely HDF5 for the new production. The current ODIM specifications can be found from EUMETNET OPERA weather radar information model for implementation with the HDF5 file format Version 2.41 (ODIM 2.41). 
+
+### OPERA Database
+OPERA Database is manually maintained table by the OPERA radar data providers and by the Croatian Meteorological and Hydrological Service (DHMZ). It is sporadically updated, at least twice a year. The available formats are json, xlsx and csv and it can be automatically pushed to ORD API. 
+
+### National volume radar data 
+Via the ORD API, the plan is to supply the incoming OPERA radar volume data as it is collected from the EUMETNET radar data providers. Typically, the number of incoming OPERA files is around 340,000 per day, amounting to approximately 45 GB daily. The data generally includes unfiltered reflectivity factor (TH), Doppler-filtered and cleaned reflectivity factor, known as "best possible" reflectivity (DBZH), and radial velocity data (VRADH). 
+
+However, the scanning strategies, data processing chains with chosen thresholds and algorithms, definitions of scanning time, spatial and temporal resolution of data, and file structures vary nationally, resulting in heterogeneous datasets. The dealiasing of VRADH is not consistently performed nationally, and currently, it is also not applied centrally in OPERA. Data can be sent as volumes or on a scan-by-scan basis, with radar variables either combined in the same file or separated into different files. 
+
+The OPERA volume data archive dates to 2011, but the data exhibits significant variability over the years. The older datasets can be quite different from the newer ones. The ODIM standard has been followed since the inception of OPERA volume data exchange; older datasets are usually in BUFR format, while newer ones are in HDF5. ODIM data format model versions 2.0 to 2.4 have been applied, but these are not always backward compatible. Due to computational resource constraints, the plan for ORD supply does not include converting the older radar datasets to HDF5 or newer versions of ODIM; this conversion is left to the users. Some encoders or links to encoders are planned to be provided.
+
+Not all countries are part of the EU and are therefore not bound by the HVD regulation. As a result, not all OPERA members share their data via the ORD API. Additionally, some EU member states have chosen not to use the ORD API, opting instead to develop their own interfaces, while others use both the ORD API and their national solutions. Currently, six NMSs have declined to supply their data via the ORD API.
+
+
+### National composites or products 
+During the design phase, the WP6 working group proposed incorporating a demonstration of national products into the API development to support National Meteorological Services (NMSs) in complying with the HVD Implementation Act requirements. These products are handled differently in both back-end processing and data supply of ORD API compared to OPERA datasets, composites, and radar volumes.
+
+The demonstration of national products includes only specific product types, such as reflectivity, rain rate, and accumulation composites, vertical wind profiles, and echo tops. The datasets are provided in either HDF5 ODIM or Cloud-optimized GeoTIFF (CoG) formats and are archived and supplied through national interfaces. Within the ORD API, only a data discovery function and a link to access the data are provided. This requires radar product providers to supply metadata in JSON format to the ORD API to ensure proper data cataloging and accessibility.
+
+Currently shared national products are:
+
+**FMI precipitation accumulation composites of 1h, 3h, 6h, and 24 h (in mm) in CoG format**
+•	FMI has an open data policy where the data and products are stored in AWS (Amazon Web Services) S3 buckets 
+•	The JSON files ingested to ORD API include the link to AWS S3 location 
+
+**KNMI 2D- and 3D -reflectivity composites in HDF5 format** 
+•	KNMI has an open data policy where the data and products are stored in AWS S3 buckets but with the dedicated API key  
+
+**Met Norway national reflectivity composites in in CoG format**
+•	MET Norway has an open data policy where radar data is stored in an open API using a local OGC Stac implementation for sharing the datafiles. Data is produced in CoG format to demonstrate the use of GeoWeb as a map tool for showing the data. The functionality of MeteoGate running on GeoWeb has not yet been finalized.
+•	The JSON files ingested to ORD API include the link to the STAC API
+
+
+## 1.2 Data Policy
+In OPERA, volume radar data remains the property of the radar data provider. Therefore, the provider has the authority to define the conditions under which the data can be distributed from OPERA or whether it is restricted for the exclusive use of EUMETNET Members. Before radar data is ingested into the EWC and stored in S3 buckets, any data without the necessary authorization is excluded and not archived in EWC.
+
+A survey was conducted to assess the rights to share data via the ORD API and determine the applicable licensing terms. Most OPERA Members have agreed to share their data, with most opting for the CC BY 4.0 license. 
+
+The property rights of OPERA composite products are held by EUMETNET, which has decided to distribute these products under the CC BY 4.0 license.
+
+Each NMS independently defines the property rights and licensing terms for its radar data. This information is communicated through MQTT messages. All data are accompanied by the appropriate license information, accessible via the ORD API or MQTT streams. License details are automatically included either in the files and metadata ingested into the system or via an authorization table managed by OPERA.
+
+
 
