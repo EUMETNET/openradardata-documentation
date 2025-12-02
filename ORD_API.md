@@ -14,7 +14,8 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
         6. ``standard_name``: DBZH
         7. ``level``: ../5.0
         8. ``format``: ODIM
-        9. ``method`` and ``duration`` are blank
+        9. ``method``: scan 
+        10. ``duration`` is blank
 
             ![ORD Query Parameters](source/images/ORD_API_location.png)
 
@@ -78,13 +79,16 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
 2. **OPERA composite products:**
    - Fetch composite product from OPERA production
-        1. ``standard_name``: RATE or ACRR or MAX
+        1. ``standard_name``: RATE or ACRR or DBZH
 
    - OPERA products:
         1. ``location_id``: 0-\*-\*-OPERA
 
    - Query ODIM format:
         1. ``format``: ODIM
+
+   - Composite:
+        1. ``method``: comp
 
 3. **Select observation items:**
    - Retrieve German sites from boundary box area (-5.5,18.0,72.0,82.1) where raw radar reflectivity data (TH) is available in ODIM format for specific time range (2025-10-13T12:10Z/2025-10-13T12:40Z):
@@ -99,7 +103,8 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
         9. ``standard_name``: TH
         10. ``unit``, ``instrument``, ``level``: leave blank
         11. ``format``: ODIM,
-        12. ``period``, ``method``, ``f``: leave blank
+        12. ``method``: scan
+        13. ``period``, ``f``: leave blank
         Result 
         ```json
             {
@@ -141,7 +146,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
                     },
                     "format": "ODIM",
                     "platform_vocabulary": "https://oscar.wmo.int/surface/rest/api/search/station?wigosId=0-20000-0-10339",
-                    "method": "point",
+                    "method": "scan",
                     "data": "https://radar.meteogate.eu/api/collectionscollections/observations/locations/0-20000-0-10339?=parameter-name=TH:0.5:point:PT30S"
                 },
                 "id": "07ea52bf21af5399cbc165982559d2ea"
@@ -182,7 +187,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
                     },
                     "format": "ODIM",
                     "platform_vocabulary": "https://oscar.wmo.int/surface/rest/api/search/station?wigosId=0-20000-0-10410",
-                    "method": "point",
+                    "method": "scan",
                     "data": "https://radar.meteogate.eu/api/collectionscollections/observations/locations/0-20000-0-10410?=parameter-name=TH:0.5:point:PT30S"
                 },
                 "id": "126aad398d3e52c3151a5cc5f7a0ffb2"
