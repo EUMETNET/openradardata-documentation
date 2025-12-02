@@ -21,6 +21,7 @@ theme:
     - content.code.copy
 
 nav:
-  - HOME: 1.md
-  - 1. OVERVIEW: 2.md
-  - 2. DISCOVERING AND ACCESSING DATA: 3.md
+  - HOME: 1-ORD-API-overview.md
+  - 2. DISCOVERING AND ACCESSING DATA: 2-ORD-API-discovering-and-accessing-data.md
+  - 3. PUBLISHING DATA: 3-ORD-API-publishing-data.md
+  - 4. SUBSCRIBING MQTTX: 4-ORD-API-subscribing-MQTTX.md
