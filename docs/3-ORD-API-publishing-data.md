@@ -78,7 +78,9 @@ Scroll down and check the properties in the Schemas box.
     - ETOP, EBASE: Reflectivity level threshold
     - RHI: Azumuth angle
     - VIL: Top heights of the integration layer
-5. ``function``: point
+5. ``function``:
+    - scan: Single site SCAN or volume scan PVOL
+    - comp: Composite product
 6. datetime, two allowed options:
     - ``start_datetime`` and ``end_datetime``: format example: '2025-10-14T07:55:00Z'
     - ``datetime`` and ``period``: ``datetime`` is the ``end_datetime``. The period in ISO8601 duration format, for example: 
