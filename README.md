@@ -2,7 +2,7 @@
 
 This repository contains the documentation for the **Open Radar Data (ORD) API** service.
 
-The ORD API service provides access to EUMETNET OPERA composite products, volume radar data for operational use, archived volume data for research purposes, and a portal for retrieving a selection of national radar products for demonstration.
+The ORD API service provides access to EUMETNET OPERA composite products, volume radar data, and a portal for retrieving a selection of national radar products for demonstration.
 
 ## Branches in this Repository
 
