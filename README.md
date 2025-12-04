@@ -87,5 +87,4 @@ All documentation in this repository is © 2025 EUMETNET and licensed under the
 [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
    
 
-## Contacts
-support.opera@eumetnet.eu
+
