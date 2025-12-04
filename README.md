@@ -60,8 +60,8 @@ Documentation is written, updated and reviewed in [`docs-dev`](https://github.co
 
 All documentation source files are located in the `docs/` directory, organized by section:
 
-- `index.md` – Homepage
-- `1-overview.md`, `2-discovering-and-accessing-data.md`, etc. – Section content
+- `1-ORD-API-overview.md` – Homepage
+- `2-ORD-API-discovering-and-accessing-data.md`, `3-ORD-API-publishing-data.md`, etc. – Section content
 - `glossary.md`, `references.md` – Supporting material
 
 ---
