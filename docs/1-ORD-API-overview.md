@@ -26,9 +26,30 @@ The data are provided in **ODIM BUFR** format for older datasets and in **ODIM H
 
 It should be noted that scanning strategies, data-processing chains (including thresholds and algorithms), definitions of scan time, spatial and temporal resolution, and file structures vary between OPERA Members, resulting in heterogeneous datasets. Dealiasing of VRADH is not performed consistently at the national level, and is currently not applied centrally within OPERA. Data may be transmitted either as full volumes or on a scan-by-scan basis, with radar variables either combined in a single file or distributed across multiple files.
 
-### 2. European composite products
-**European composite products** — including maximum reflectivity factor, instantaneous rain rate, and 1-hour rainfall accumulation — are available both as a 24-hour rolling cache and as a long-term archive dating back to 2012 (TBD). These products are provided by the EUMETNET OPERA programme in ODIM HDF5 and cloud-optimized GeoTIFF formats (TBD).
-5. **National radar products**, e.g. national radar composites, rain rate composites, accumulation products, and echo tops. These are provided as a link to be downloaded from the national interfaces, and typically in ODIM HDF5 or cloud-optimized GeoTiffs (TBD).
+### 2. EUMETNET OPERA composite products
+**OPERA composite products (provided by OPERA production called ODYSSEY, CIRRUS, and NIMBUS)** are available both as a 24-hour rolling cache and as a long-term archive dating back to 2012 (TBD). These products are provided by the EUMETNET OPERA programme in ODIM HDF5 and cloud-optimized GeoTIFF formats (TBD).  The composite products are based on incoming polar scans and volumes of filtered reflectivity. The composites cover the whole of Europe (area: 3,800 × 4,400 km2) in a Lambert Equal Area projection with approx. corner coordinates: (70 N 30 W), (70N 50E), (32N 15W), and (32 N 30E). 
+
+There are three products on offer from the OPERA suite of products:
+
+**OPERA Instantaneous Maximum Reflectivity (in dBZ)** 
+ * In the maximum reflectivity composite each composite pixel contains the maximum of all polar cell values of the contributing radars at that location.
+ * ODYSSEY production 2012-10/2024 and CIRRUS production 07/2024 –
+ * In ODYSSEY production covering years of 01/2011- 10/2024, the composites are all updated every 15 minutes and issued ca. 15 minutes after data time with 2 x 2 km    resolution. The example image of ODYSSEY maximum reflectivity composite is shown in Figure 1. In the new production (07/2024 -) the CIRRUS products are with higher spatial resolution of 1 x 1 km and update cycle of 5 minutes.
+
+**OPERA Instantaneous Surface Rain rate composite (in mm/h)** 
+ * ODYSSEY production 2012-10/2024 and NIMBUS production 07/2024 -
+ * In the ODYSSEY rain rate composite, each composite pixel is a weighted average of the valid pixels of the contributing radars, weighted by a quality index, the distance from center of the pixel and an exponential index related to inverse of the beam altitude. Whereas in NIMBUS production the compositing algorithm is based on the lowest elevation angle only.
+ * Measured reflectivity values are converted to rainfall (mm/h) using the Marshall-Palmer equation.
+
+**OPERA One Hour rainfall Accumulation (in mm)** 
+ * Rainfall accumulation is the sum of the previous four 15-minute rain-rate products.
+ * ODYSSEY production 2012-10/2024 and NIMBUS production 07/2024 -
+
+Four quality filters are applied to the OPERA incoming volume data prior to compositing (Saltikoff et al. 2019). The data sharing model used in OPERA is an in-house developed ODIM (OPERA Data Information Model) both in BUFR and HDF5 for older production, solely HDF5 for the new production. The current ODIM specifications can be found from EUMETNET OPERA weather radar information model for implementation with the HDF5 file format Version 2.41 (ODIM 2.41). 
+
+
+### 3. National radar products
+National radar products, e.g. national radar composites, rain rate composites, accumulation products, and echo tops. These are provided as a link to be downloaded from the national interfaces, and typically in ODIM HDF5 or cloud-optimized GeoTiffs (TBD).
 
 
 
