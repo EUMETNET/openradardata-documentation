@@ -8,13 +8,30 @@ Weather radar data are also classified as HVDs and, accordingly, one of the aims
 
 The **ORD API** enables users to access radar data for visualization, analysis, and integration into other systems. For EUMETNET Members, the **Ingest API** focuses on data ingestion, allowing EUMETNET Members to provide local stored data (ODIM, GeoTIFF) references. The ORD API store the latest 24h radar data. The archive system will be implemented in later stage (TBD). 
 
-The software [Open Radar Data API](https://radar.meteogate.eu/api/) and the related [Open Radar Data Ingest API](https://radar.meteogate.eu/ingest/) are located at [European Weather Cloud](https://europeanweather.cloud/). The EUMETNET OPERA datasets in 24-cache are available at the S3 Bucket [openradar-24h](https://s3.waw3-1.cloudferro.com/openradar-24h/). The **ORD API** is also available from [meteogate.eu](https://api.meteogate.eu/ord/edr)
-
+The software [Open Radar Data API](https://radar.meteogate.eu/api/) and the related [Open Radar Data Ingest API](https://radar.meteogate.eu/ingest/) are located at [European Weather Cloud](https://europeanweather.cloud/). The EUMETNET OPERA datasets in 24-cache are available at the S3 Bucket [openradar-24h](https://s3.waw3-1.cloudferro.com/openradar-24h/). The **ORD API** is also available from [meteogate.eu](https://api.meteogate.eu/ord/edr).
 
 ---
 
-## 1.1 Dataset description
-In this section we describe the datasets that are planned to be supplied by the RODEO developed APIs. In short, these are stated in Table 1.
+## Published datasets in ORD API
+There are three types of data available via ORD.
+### 1. European single-site volume radar data
+**European single-site volume weather radar** data are available through the EUMETNET OPERA programme, both as a 24-hour rolling cache and as an extensive archive (TBD). The data supply is forwarded directly from the incoming OPERA radar volume data as they are collected from the EUMETNET radar data providers and released with the authorisation of each provider. The data generally include:
+  * unfiltered reflectivity factor (TH)
+  * Doppler-filtered and cleaned reflectivity factor, known as the “best possible” reflectivity (DBZH)
+  * radial velocity data (VRADH)
+
+Currently, EUMETNET OPERA does not exchange dual-polarisation data. These are planned for inclusion in the coming years within the OPERA data exchange, after which they will also be supplied through the ORD API.
+
+The data are provided in **ODIM BUFR** format for older datasets and in **ODIM HDF5** format for more recent ones. Some encoders or links to encoders are planned (TBD), for example [xradar](https://github.com/openradar/xradar). **[ODIM](https://eumetnet.eu/wp-content/uploads/2021/07/ODIM_H5_v2.4.pdf)** data model versions 2.0 to 2.4 have been used, noting that these versions are not always backward compatible.
+
+It should be noted that scanning strategies, data-processing chains (including thresholds and algorithms), definitions of scan time, spatial and temporal resolution, and file structures vary between OPERA Members, resulting in heterogeneous datasets. Dealiasing of VRADH is not performed consistently at the national level, and is currently not applied centrally within OPERA. Data may be transmitted either as full volumes or on a scan-by-scan basis, with radar variables either combined in a single file or distributed across multiple files.
+
+### 2. European composite products
+**European composite products** — including maximum reflectivity factor, instantaneous rain rate, and 1-hour rainfall accumulation — are available both as a 24-hour rolling cache and as a long-term archive dating back to 2012 (TBD). These products are provided by the EUMETNET OPERA programme in ODIM HDF5 and cloud-optimized GeoTIFF formats (TBD).
+5. **National radar products**, e.g. national radar composites, rain rate composites, accumulation products, and echo tops. These are provided as a link to be downloaded from the national interfaces, and typically in ODIM HDF5 or cloud-optimized GeoTiffs (TBD).
+
+
+
 ### OPERA Composites Data (ODYSSEY, CIRRUS, NIMBUS)
 The composites cover the whole of Europe (area: 3,800 × 4,400 km2) in a Lambert Equal Area projection with approx. corner coordinates: (70 N 30 W), (70N 50E), (32N 15W), and (32 N 30E). In ODYSSEY production covering years of 01/2011- 10/2024, the composites are all updated every 15 minutes and issued ca. 15 minutes after data time with 2 x 2 km resolution. The example image of ODYSSEY maximum reflectivity composite is shown in Figure 1. In the new production (07/2024 -) the CIRRUS products are with higher spatial resolution of 1 x 1 km and update cycle of 5 minutes. The composite products are based on incoming polar scans and volumes of filtered reflectivity.
 
@@ -72,24 +89,8 @@ In OPERA, volume radar data remains the property of the radar data provider. The
 
 A survey was conducted to assess the rights to share data via the ORD API and determine the applicable licensing terms. Most OPERA Members have agreed to share their data, with most opting for the CC BY 4.0 license. 
 
-## RODEO
-
-The [RODEO project](https://rodeo-project.eu/) develops a user interface and Application Programming Interfaces (API) for accessing meteorological datasets declared as High Value Datasets (HVD) by the EU Implementing Regulation (EU) 2023/138 under the EU Open Data Directive (EU) 2019/1024. The project also fosters the engagement between data providers and data users for enhancing the understanding of technical solutions being available for sharing and accessing the HVD datasets.
 
 
-# Open Radar Data (ORD)
-
-The weather radar data is also considered as HVDs, and therefore, one of the goals of RODEO is to supply near real-time weather radar observations. The radar data will be published on both a message queue using [MQTT](https://mqtt.org/) and [EDR](https://ogcapi.ogc.org/edr/) compliant APIs. Metadata will also be made available through [OGC Records](https://ogcapi.ogc.org/records/) APIs. The system architecture is portable, scalable and modular for taking into account possible future extensions to existing networks and datasets. Diagrams of the system could be found here as [C4 diagrams](https://github.com/EUMETNET/openradardata-technical-architecture/tree/ingest/source/images/c4-container-openradar-wp6-user.png).
-
-
-
-
-
-## Published datasets in ORD
-There are three types of data available via ORD.
-1. **European single-site volume radar data** are available through the EUMETNET OPERA programme, both as a 24-hour rolling cache and as an extensive archive (TBD). The data are provided in BUFR format for older datasets and in ODIM HDF5 format for more recent ones.
-2. **European composite products** — including maximum reflectivity factor, instantaneous rain rate, and 1-hour rainfall accumulation — are available both as a 24-hour rolling cache and as a long-term archive dating back to 2012 (TBD). These products are provided by the EUMETNET OPERA programme in ODIM HDF5 and cloud-optimized GeoTIFF formats (TBD).
-3. **National radar products**, e.g. national radar composites, rain rate composites, accumulation products, and echo tops. These are provided as a link to be downloaded from the national interfaces, and typically in ODIM HDF5 or cloud-optimized GeoTiffs (TBD).
 
 ---
 ## Getting Started
