@@ -62,7 +62,7 @@ All documentation source files are located in the `docs/` directory, organized b
 
 - `1-ORD-API-overview.md` – Homepage
 - `2-ORD-API-discovering-and-accessing-data.md`, `3-ORD-API-publishing-data.md`, etc. – Section content
-- `glossary.md`, `references.md` – Supporting material
+- `glossary.md` – Supporting material
 
 ---
 
