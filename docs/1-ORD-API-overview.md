@@ -4,7 +4,7 @@ The **Open Radar Data (ORD) API** is a service, which provides access to EUMETNE
 
 ORD API was developed within the EU- and EUMETNET-funded [RODEO project](https://rodeo-project.eu/), which created a user interface and Application Programming Interfaces (APIs) for accessing meteorological datasets designated as High Value Datasets (HVDs) under the EU Implementing Regulation (EU) 2023/138 of the EU Open Data Directive (EU) 2019/1024.
 
-Weather radar data are also classified as HVDs and, accordingly, one of the aims of RODEO is to provide near real-time and archived weather radar observations. The radar data ispublished both via a message queue using [MQTT](https://mqtt.org/) and through [EDR](https://ogcapi.ogc.org/edr/)-compliant APIs. Metadata will also be made available via [OGC Records](https://ogcapi.ogc.org/records/) APIs.
+Weather radar data are also classified as HVDs and, accordingly, one of the aims of RODEO is to provide near real-time and archived weather radar observations. The radar data ispublished both via a message queue using [MQTT](https://mqtt.org/) and through [EDR](https://ogcapi.ogc.org/edr/)-compliant APIs. Metadata will also be made available via [OGC Records](https://ogcapi.ogc.org/records/) APIs. The ORD API can be reached via [MeteoGate](https://meteogate.eu/) which is a ‘One-Stop Shop’ for meteorological and hydrological products and data.
 
 ---
 
