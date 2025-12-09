@@ -14,14 +14,6 @@ The software [Open Radar Data API](https://radar.meteogate.eu/api/) and the rela
 
 The EUMETNET OPERA datasets in 24-cache are available at the S3 Bucket [openradar-24h](https://s3.waw3-1.cloudferro.com/openradar-24h/). The **ORD API** is also available from [meteogate.eu](https://api.meteogate.eu/ord/edr).
 
-## Data Policy
-In EUMETNET OPERA, volume radar data remains the property of the radar data provider. Therefore, the provider has the authority to define the conditions under which the data can be distributed from OPERA to ORD. Before radar data is ingested into EWC (European Weather Cloud) and stored in S3 buckets, any data without the necessary authorisation is excluded and are not supplied.
-
-Most OPERA Members have agreed to share their data, with most opting for the CC BY 4.0 license with some exceptions to the used license. 
-
-The property rights of OPERA composite products are held by EUMETNET, which has decided to distribute these products under the CC BY 4.0 license.
-
-For the national products, the national practices are applied and these should be stated in the metadata. 
 
 ---
 ## Getting Started
@@ -33,9 +25,6 @@ For the national products, the national practices are applied and these should b
 5. Public Meteogate API available via [meteo gateway](https://api.meteogate.eu/ord/edr)
 6. [ORD S3 24h cache](https://s3.waw3-1.cloudferro.com/openradar-24h/)
 7. [ORD S3 Archive](https://s3.waw3-1.cloudferro.com/openradar-archive/) TBD
-
-
-
 
 ---
 
@@ -101,6 +90,16 @@ Currently shared national products are:
 
 ---
 
+## Data Policy
+In EUMETNET OPERA, volume radar data remains the property of the radar data provider. Therefore, the provider has the authority to define the conditions under which the data can be distributed from OPERA to ORD. Before radar data is ingested into EWC (European Weather Cloud) and stored in S3 buckets, any data without the necessary authorisation is excluded and are not supplied.
+
+Most OPERA Members have agreed to share their data, with most opting for the CC BY 4.0 license with some exceptions to the used license. 
+
+The property rights of OPERA composite products are held by EUMETNET, which has decided to distribute these products under the CC BY 4.0 license.
+
+For the national products, the national practices are applied and these should be stated in the metadata. 
+
+---
 ## Contacts
 support.opera@eumetnet.eu
 ---
