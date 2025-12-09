@@ -1,4 +1,4 @@
-## Data Retrieval with Open Radar Data  API
+## Data Retrieval with Open Radar Data (ORD) API
 
 ### ORD API Examples
 
