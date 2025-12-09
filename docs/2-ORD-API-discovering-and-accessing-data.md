@@ -1,6 +1,6 @@
 ## Data Retrieval with Open Radar Data (ORD) API
 
-### [Data available in ORD API](1-ORD-API-overview.md)
+### [Data available in ORD API]([1-ORD-API-overview.md](https://github.com/EUMETNET/openradardata-documentation/blob/main/docs/1-ORD-API-overview.md#published-datasets-in-ord-api))
 
 1.	European single-site radar data (via EUMETNET OPERA)
 * 24-hour rolling cache, with a long-term archive (2012–, TBD)
