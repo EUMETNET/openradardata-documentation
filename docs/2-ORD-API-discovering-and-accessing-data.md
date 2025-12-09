@@ -2,7 +2,7 @@
 
 ### [Data available in ORD API](https://github.com/EUMETNET/openradardata-documentation/blob/main/docs/1-ORD-API-overview.md#published-datasets-in-ord-api)
 
-**1. European single-site radar data (via EUMETNET OPERA)**
+**1. EUMETNET OPERA single-site radar data**
    * 24-hour rolling cache, with a long-term archive (2012–, TBD)
    * Formats: BUFR (older) and ODIM HDF5 (recent)
    * License: CC BY 4.0 (with exceptions noted in metadata)
@@ -10,29 +10,27 @@
         - DBZH (Doppler-filtered horizontal reflectivity factor, with national QC applied)
         - TH (unfiltered horizontal reflectivity factor)
         - VRADH (horizontal radial velocity)
-        - Basic dual-pol variables (e.g. correlation coefficient, differential reflectivity, differential phase shift,                 specific differential phase) are planned to be added from 2027 onwards (TBC)
+        - Basic dual-pol variables (e.g. correlation coefficient, differential reflectivity, differential phase shift,                 specific differential phase) are planned to be added from 2027 onwards (TBD)
 
-**2.	European OPERA composite products**
-o	Products: maximum reflectivity, instantaneous rain rate, 1-hour accumulation
-o	24-hour rolling cache and long-term archive (2012–, coming later)
-o	Formats: ODIM HDF5 and cloud-optimized GeoTIFF (planned)
-o	License: CC BY 4.0 (effective 13 November 2025; currently test-only access)
-3.	National radar products
-o	Examples of national composites, rain rate composites, accumulations, echo tops
-o	Access: via links to national interfaces (24 access of links)
-o	Formats: ODIM HDF5 or cloud-optimized GeoTIFF
+**2. European OPERA composite products**
+  * Products: maximum reflectivity, instantaneous rain rate, 1-hour accumulation
+  * TBDcoming later)
+  * Formats: ODIM HDF5 and cloud-optimized GeoTIFF (TBD)
+  * License: CC BY 4.0
+     
+**3. National radar products**
+  * Examples of national composites, rain rate composites, accumulations, echo tops
+  * Access: via links to national interfaces (24h access of links)
+  * Formats: ODIM HDF5 or cloud-optimized GeoTIFF
 
-
-
-
-
+---
 
 ### ORD API Examples
 
 The **Open Radar Data API** is ideal for retrieving and integrating radar data into various workflows. Here are some examples:
 
-1. **OPERA single site volume radar data:**
-   - Retrieve single site (Hurum, Norway) radar intensity data (DBZH) in ODIM format for specific time range (2025-10-13T12:10Z/2025-10-13T12:40Z) and elevations lower than 5&deg;:
+**1. EUMETNET OPERA single-site volume radar data:**
+  * Retrieve single site (Hurum, Norway) radar intensity data (DBZH) in ODIM format for specific time range (2025-10-13T12:10Z/2025-10-13T12:40Z) and elevations lower than 5&deg;:
         1. Open [ORD API Swagger UI](https://radar.meteogate.eu/api/docs) and select: collections/observations/localtions/{location_id}
         2. Click to "Try it out" button and set the query parameters:
         3. ``location_id``: 0-20000-0-01498
