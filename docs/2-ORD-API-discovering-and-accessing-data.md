@@ -3,18 +3,16 @@
 ### [Data available in ORD API](https://github.com/EUMETNET/openradardata-documentation/blob/main/docs/1-ORD-API-overview.md#published-datasets-in-ord-api)
 
 **1. European single-site radar data (via EUMETNET OPERA)**
-
-    * 24-hour rolling cache, with a long-term archive (2012–, TBD)
-    * Formats: BUFR (older) and ODIM HDF5 (recent)
-    * License: CC BY 4.0 (with exceptions noted in metadata)
-    * Currently mainly includes:
-    
+   * 24-hour rolling cache, with a long-term archive (2012–, TBD)
+   * Formats: BUFR (older) and ODIM HDF5 (recent)
+   * License: CC BY 4.0 (with exceptions noted in metadata)
+   * Currently mainly includes:
         - DBZH (Doppler-filtered horizontal reflectivity factor, with national QC applied)
         - TH (unfiltered horizontal reflectivity factor)
         - VRADH (horizontal radial velocity)
         - Basic dual-pol variables (e.g. correlation coefficient, differential reflectivity, differential phase shift,                 specific differential phase) are planned to be added from 2027 onwards (TBC)
 
-2.	European OPERA composite products
+**2.	European OPERA composite products**
 o	Products: maximum reflectivity, instantaneous rain rate, 1-hour accumulation
 o	24-hour rolling cache and long-term archive (2012–, coming later)
 o	Formats: ODIM HDF5 and cloud-optimized GeoTIFF (planned)
