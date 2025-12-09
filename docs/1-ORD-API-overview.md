@@ -8,15 +8,16 @@ As weather radar data are also classified as HVDs and, accordingly, one of the a
 
 The ORD API can be reached via **MeteoGate** which is a ‘One-Stop Shop’ for meteorological and hydrological products and data (more information can be found in [MeteoGate](https://meteogate.eu/)).
 
+---
+## Getting Started
+
+
 For EUMETNET Members, the **Ingest API** focuses on data ingestion, allowing EUMETNET Members to provide local stored data (ODIM, GeoTIFF) references. 
 
 The software [Open Radar Data API](https://radar.meteogate.eu/api/) and the related [Open Radar Data Ingest API](https://radar.meteogate.eu/ingest/) are located at [European Weather Cloud](https://europeanweather.cloud/) (EWC). 
 
 The EUMETNET OPERA datasets in 24-cache are available at the S3 Bucket [openradar-24h](https://s3.waw3-1.cloudferro.com/openradar-24h/). The **ORD API** is also available from [meteogate.eu](https://api.meteogate.eu/ord/edr).
 
-
----
-## Getting Started
 
 1. [ORD API User Instructions](ORD_API.md)
 2. [Subscribe to notification messages](ORD_MQTT.md)
