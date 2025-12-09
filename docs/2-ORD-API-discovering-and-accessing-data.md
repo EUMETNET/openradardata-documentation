@@ -1,5 +1,31 @@
 ## Data Retrieval with Open Radar Data (ORD) API
 
+### [Data available in ORD API](1-ORD-API-overview.md)
+
+1.	European single-site radar data (via EUMETNET OPERA)
+* 24-hour rolling cache, with a long-term archive (2012–, TBD)
+* Formats: BUFR (older) and ODIM HDF5 (recent)
+* License: CC BY 4.0 (with exceptions noted in metadata)
+* Currently mainly includes:
+    - DBZH (Doppler-filtered horizontal reflectivity factor, with national QC applied)
+	TH (unfiltered horizontal reflectivity factor)
+	VRADH (horizontal radial velocity)
+o	Basic dual-pol variables (e.g. correlation coefficient, differential reflectivity, differential phase shift, specific differential phase) are planned to be added from 2027 onwards (TBC)
+2.	European OPERA composite products
+o	Products: maximum reflectivity, instantaneous rain rate, 1-hour accumulation
+o	24-hour rolling cache and long-term archive (2012–, coming later)
+o	Formats: ODIM HDF5 and cloud-optimized GeoTIFF (planned)
+o	License: CC BY 4.0 (effective 13 November 2025; currently test-only access)
+3.	National radar products
+o	Examples of national composites, rain rate composites, accumulations, echo tops
+o	Access: via links to national interfaces (24 access of links)
+o	Formats: ODIM HDF5 or cloud-optimized GeoTIFF
+
+
+
+
+
+
 ### ORD API Examples
 
 The **Open Radar Data API** is ideal for retrieving and integrating radar data into various workflows. Here are some examples:
