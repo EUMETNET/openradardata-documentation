@@ -10,14 +10,12 @@ The ORD API can be reached via **MeteoGate** which is a ‘One-Stop Shop’ for 
 
 For EUMETNET Members, the **Ingest API** focuses on data ingestion, allowing EUMETNET Members to provide local stored data (ODIM, GeoTIFF) references. 
 
-Currently, the ORD API store the latest 24-h radar data and products. The archive system will be implemented in later stage (TBD). 
-
 The software [Open Radar Data API](https://radar.meteogate.eu/api/) and the related [Open Radar Data Ingest API](https://radar.meteogate.eu/ingest/) are located at [European Weather Cloud](https://europeanweather.cloud/) (EWC). 
 
 The EUMETNET OPERA datasets in 24-cache are available at the S3 Bucket [openradar-24h](https://s3.waw3-1.cloudferro.com/openradar-24h/). The **ORD API** is also available from [meteogate.eu](https://api.meteogate.eu/ord/edr).
 
 ## Data Policy
-In EUMETNET OPERA, volume radar data remains the property of the radar data provider. Therefore, the provider has the authority to define the conditions under which the data can be distributed from OPERA to ORD. Before radar data is ingested into EWC and stored in S3 buckets, any data without the necessary authorisation is excluded and are not supplied.
+In EUMETNET OPERA, volume radar data remains the property of the radar data provider. Therefore, the provider has the authority to define the conditions under which the data can be distributed from OPERA to ORD. Before radar data is ingested into EWC (European Weather Cloud) and stored in S3 buckets, any data without the necessary authorisation is excluded and are not supplied.
 
 Most OPERA Members have agreed to share their data, with most opting for the CC BY 4.0 license with some exceptions to the used license. 
 
@@ -25,11 +23,13 @@ The property rights of OPERA composite products are held by EUMETNET, which has 
 
 For the national products, the national practices are applied and these should be stated in the metadata. 
 
-
 ---
 
 ## Published datasets in ORD API
 There are three types of data available via ORD.
+
+Currently, the **ORD API** store the latest 24-h radar data and products. The archive system will be implemented in later stage (TBD). 
+
 ### 1. European single-site volume radar data
 **European single-site volume weather radar** data are available through the EUMETNET OPERA programme, both as a 24-hour rolling cache and as an extensive archive (TBD). The data supply is forwarded directly from the incoming OPERA radar volume data as they are collected from the EUMETNET radar data providers and released with the authorisation of each provider. The data generally include:
   * unfiltered reflectivity factor (TH)
