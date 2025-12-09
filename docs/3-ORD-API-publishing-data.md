@@ -3,7 +3,7 @@
 
 The [ORD Ingestion API](https://radar.meteogate.eu/ingest/docs) includes three endpoints for sharing data:
 
-![Ingest Endpoints](source/images/ORD_Ingest_endpoints.png)
+![Ingest Endpoints](Images/ORD_Ingest_endpoints.png)
 
 ### 1. BUFR Endpoint
 - Used for uploading and sharing **BUFR files**.
@@ -24,18 +24,18 @@ The [ORD Ingestion API](https://radar.meteogate.eu/ingest/docs) includes three e
 - For **EUMETNET National Meteorological Services (NMSs) to provide national products** via ORD
 - Users provide radar metadata through the JSON endpoint.
 
-![JSON Endpoint](source/images/ORD_Ingest_JSON_endpoint.png)
+![JSON Endpoint](Images/ORD_Ingest_JSON_endpoint.png)
 
 #### Swagger UI Usage:
 1. Klick to "Try it out" button
 2. Insert your schema to the textbox
 3. Klick to Execute button, and return- code 200 means "Succesfully ingested" 
 
-![Ingest Success](source/images/ORD_Ingest_Success.png)
+![Ingest Success](Images/ORD_Ingest_Success.png)
 
 Error: ``platform`` missing
 
-![Ingest Error](source/images/ORD_Ingest_Error.png)
+![Ingest Error](Images/ORD_Ingest_Error.png)
 
 #### Command line ingest:
 ```bash
@@ -60,7 +60,7 @@ curl -X 'POST' \
 ## Make the upload schema manually
 Scroll down and check the properties in the Schemas box.
  
-![API INGEST](source/images/ORD_Properties.png)
+![API INGEST](Images/ORD_Properties.png)
 
 1. ``coordinates``:
     - Single site: use site coordinates
