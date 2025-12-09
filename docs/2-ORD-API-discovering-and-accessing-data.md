@@ -55,7 +55,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
         Note: Update the datetime field within this URL.
 
         12. ODIM data are downloadable from these links:
-            ![ORD Response](source/images/ORD_API_location_response_links.png)
+            ![ORD Response](Images/ORD_API_location_response_links.png)
 
         13. Using [aws](https://aws.amazon.com/cli/) tool
 
@@ -92,7 +92,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
             ```
         15. If no data for the specified query the response is 204.
 
-            ![ORD Response](source/images/ORD_API_response_no_content.png)
+            ![ORD Response](Images/ORD_API_response_no_content.png)
 
         
 
@@ -102,7 +102,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
    - Retrieve all Dutch data.
         1. ``location_id``: 0-20010-\*-nl\*
 
-2. **OPERA composite products:**
+**2. OPERA composite products:**
    - Fetch composite product from OPERA production
         1. ``standard_name``: RATE or ACRR or DBZH
 
@@ -115,7 +115,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
    - Composite:
         1. ``method``: comp
 
-4. **Select observation items:**
+**3. Select observation items:**
    - Retrieve German sites from boundary box area (-5.5,18.0,72.0,82.1) where raw radar reflectivity data (TH) is available in ODIM format for specific time range (2025-10-13T12:10Z/2025-10-13T12:40Z):
         1. Open [ORD API](https://radar.meteogate.eu/api/docs) and select: collections/observations/items
         2. Click to "Try it out" button and set the query parameters:
