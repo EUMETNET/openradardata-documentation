@@ -68,9 +68,9 @@ There are three products on offer from the OPERA suite of products:
  The data sharing model used in OPERA is an in-house developed ODIM (OPERA Data Information Model) both in BUFR and HDF5 for older production, solely HDF5 for the new production. The current ODIM specifications can be found from EUMETNET OPERA weather radar information model for implementation with the HDF5 file format Version 2.41 (ODIM 2.41). 
 
 ### 3. National radar products
-National radar products, e.g. national radar composites, rain rate composites, accumulation products, and echo tops. These are provided as a link to be downloaded from the national interfaces, and typically in ODIM HDF5 or cloud-optimized GeoTiffs (TBD).
+National radar products, e.g. national radar composites, rain rate composites, accumulation products, and echo tops. These are provided as a link to be downloaded from the national interfaces. This requires radar product providers to supply metadata in JSON format to the ORD API to ensure proper data cataloging and accessibility.
 
-The datasets are provided in either **HDF5 ODIM** or **Cloud-optimized GeoTIFF (CoG)** formats and are archived and supplied through national interfaces. Within the ORD API, only a data discovery function and a link to access the data are provided. This requires radar product providers to supply metadata in JSON format to the ORD API to ensure proper data cataloging and accessibility.
+The datasets are provided in either **HDF5 ODIM** or **Cloud-optimized GeoTIFF (CoG)** formats.  
 
 Only 24-hour links are provided. Users interested in bulk downloads or longer time series are advised to use the data-sharing interfaces of the respective NMSs.
 
