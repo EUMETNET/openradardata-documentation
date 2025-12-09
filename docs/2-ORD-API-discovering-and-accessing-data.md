@@ -42,11 +42,11 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
         9. ``method``: scan 
         10. ``duration`` is blank
 
-            ![ORD Query Parameters](docs/images/ORD_API_location.png)
+            ![ORD Query Parameters](/images/ORD_API_location.png)
 
         11. Click the Execution button and the response available. See the ``curl`` example the request url and the response below
 
-            ![ORD Response](docs/images/ORD_API_location_response.png)
+            ![ORD Response](/images/ORD_API_location_response.png)
 
         12. Direct meteogate query link:
         ```
