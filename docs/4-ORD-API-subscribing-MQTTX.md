@@ -39,7 +39,7 @@ This guide explains how to subscribe to an MQTT stream using **MQTTX**, a user-f
 
 4. Click **Connect** to establish the connection. The status of the connection will change to **Connected** if successful.
 
-![MQTT_Connext](source/images/ORD_MQTT.png)
+![MQTT_Connext](Images/ORD_MQTT.png)
 
 ---
 
@@ -60,6 +60,6 @@ This guide explains how to subscribe to an MQTT stream using **MQTTX**, a user-f
 2. The messages include both the topic name and the payload (data sent within the message).
 3. The direct link is the link section(rel="item")
 
-![MQTT_Connext](source/images/ORD_MQTT_topic.png)
+![MQTT_Connext](Images/ORD_MQTT_topic.png)
 
 
