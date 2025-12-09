@@ -15,8 +15,8 @@ The ORD API can be reached via **MeteoGate** which is a ‘One-Stop Shop’ for 
 
 
 1. [ORD API User Instructions](2-ORD-API-discovering-and-accessing-data.md)
-2. [Subscribe to notification messages](docs/4-ORD-API-subscribing-MQTTX.md)
-3. For EUMETNET Members only on data ingestion: [ORD Ingest API User Instructions](docs/3-ORD-API-publishing-data.md)
+2. [Subscribe to notification messages](4-ORD-API-subscribing-MQTTX.md)
+3. For EUMETNET Members only on data ingestion: [ORD Ingest API User Instructions](3-ORD-API-publishing-data.md)
 4. Visit the Swagger UI for the **Open Radar API** ([here](https://radar.meteogate.eu/api/docs)) and the **Ingest API** ([here](https://radar.meteogate.eu/ingest/docs)) to explore the endpoints and capabilities.
 5. Public Meteogate API available via [MeteoGate Gateway](https://api.meteogate.eu/ord/edr)
 6. The EUMETNET OPERA datasets in 24-cache are available at the S3 Bucket: [ORD S3 24h cache](https://s3.waw3-1.cloudferro.com/openradar-24h/)
