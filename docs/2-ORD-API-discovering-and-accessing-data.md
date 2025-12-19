@@ -1,5 +1,14 @@
 ## Data Retrieval with Open Radar Data (ORD) API
 
+---
+### Please note: valid until the first weeks of January 2026
+
+The **ORD API** is currently in a pre-operational phase. During this period, access to the data can be arranged by whitelisting users’ IP addresses or IP address ranges. Requests should be sent to support.opera[at]eumetnet.eu, and we will enable access accordingly. Please note that response times may be slightly longer during holiday periods.
+
+Once the onboarding of the ORD API to MeteoGate has been completed, access will be provided via **MeteoGate**, which serves as a one-stop shop for meteorological and hydrological products and data. Further information is available on the MeteoGate website [MeteoGate](https://meteogate.eu/)).
+
+---
+
 ### [Data available in ORD API](https://github.com/EUMETNET/openradardata-documentation/blob/main/docs/1-ORD-API-overview.md#published-datasets-in-ord-api)
 
 **1. EUMETNET OPERA single-site radar data**
