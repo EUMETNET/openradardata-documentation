@@ -8,7 +8,12 @@ The software [Open Radar Data API](https://radar.meteogate.eu/api/) and the rela
 
 As weather radar data are also classified as HVDs and, accordingly, one of the aims of RODEO is to provide near real-time and archived weather radar observations. The radar data are published both via a message queue using [MQTT](https://mqtt.org/) and through [EDR](https://ogcapi.ogc.org/edr/) - compliant APIs. Metadata will also be made available via [OGC Records](https://ogcapi.ogc.org/records/) APIs. 
 
-The ORD API can be reached via **MeteoGate** which is a ‘One-Stop Shop’ for meteorological and hydrological products and data (more information can be found in [MeteoGate](https://meteogate.eu/)).
+---
+## Please note: valid until the first weeks of January 2026
+
+The **ORD API** is currently in a pre-operational phase. During this period, access to the data can be arranged by whitelisting users’ IP addresses or IP address ranges. Requests should be sent to support.opera[at]eumetnet.eu, and we will enable access accordingly. Please note that response times may be slightly longer during holiday periods.
+
+Once the onboarding of the ORD API to MeteoGate has been completed, access will be provided via **MeteoGate**, which serves as a one-stop shop for meteorological and hydrological products and data. Further information is available on the MeteoGate website [MeteoGate](https://meteogate.eu/)).
 
 ---
 ## Getting Started
