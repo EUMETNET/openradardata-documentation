@@ -58,9 +58,7 @@ Radar data must be published in **open, machine-readable formats**, specifically
 * **HDF5**
 * **BUFR** (old data format for the archived data)
 
----
-
-### **4. Metadata & Documentation**
+### **4. Metadata & documentation**
 
 Radar datasets must be accompanied by:
 
@@ -70,12 +68,9 @@ Radar datasets must be accompanied by:
   * data structure
   * semantics
   * variables and conventions used
-
-The regulation explicitly refers to INSPIRE-aligned documentation as an example of good practice .
-
 ---
 
-## Legal Conditions for Reuse
+## Legal conditions for reuse
 
 ### **Licensing**
 
@@ -86,51 +81,24 @@ Radar HVDs must be made available under:
 
 This allows **free and unrestricted reuse**, including commercial use, provided attribution is given .
 
----
-
 ### **Cost**
 
 High-Value Datasets must be provided **free of charge**, unless a temporary exemption applies under the Open Data Directive (not typical for meteorological services).
 
 ---
 
-## API Quality & Operational Requirements (Applies to All HVDs)
-
-Radar data APIs must also comply with general HVD rules:
-
-* Publicly documented **terms of use**
-* Published **quality-of-service criteria** (availability, capacity, performance)
-* A designated **point of contact** for API users
-* Datasets clearly marked as **“High-Value Dataset”** in their metadata .
-
----
-
-## What This Means in Practice for Radar Data Users
-
-For users, this regulation ensures that weather radar data across Europe are:
-
-* **Openly licensed and free to use**
-* **Accessible programmatically via APIs**
-* **Available in near real time**
-* **Provided in standard scientific formats**
-* **Comparable and interoperable across countries**
-
-This significantly lowers barriers for:
-
-* research
-* cross-border applications
-* AI and machine learning
-* nowcasting, hydrology, aviation, and climate services.
-
----
+## Compliance of ORD API data and product supply with the HVD scope and requirements?
 
 
 ---
 
-## What are the High Value Dataset requirements for weather radar data 
+
 
 
 ---
+
+## Clarifying the terminology in HVDs
+The annex in HVD annex table is inaccurate and here are briefly explained the terminology used in radar meteorology. The used terminology in the current key attributes list (https://glossary.ametsoc.org/).
 
 * Reflectivity factor
 * Backscatter
@@ -140,8 +108,6 @@ This significantly lowers barriers for:
 * Echotops (echo tops) 
 
 
-## Clarifying the terminology in HVDs
-The annex in HVD annex table is inaccurate and here are briefly explained the terminology used in radar meteorology. The used terminology in the current key attributes list (https://glossary.ametsoc.org/).
 
 ### Reflectivity 
 The basic radar variable is actually called radar reflectivity factor, which is stated in units of mm6 m-3 or provided also as dBZ. The radar reflectivity factor is proportional to the reflectivity which again has dimensions of area per unit volume (e.g., cm2m-3, or, more commonly, cm-1 or m-1), however reflectivity is not given as observable of the weather radar.  
