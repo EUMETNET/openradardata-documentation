@@ -31,20 +31,15 @@ This implies that **both single-site and composite radar products**, including p
 
 ---
 
-## Technical Requirements for Radar Data Publication
+## Technical requirements for radar data publication
 
 ### **1. Update Frequency & Timeliness**
 
 Radar data must be made available:
 
-* **Near real time**
 * With updates every **5 minutes**, or at the **shortest available interval** 
 
-This is a key requirement for nowcasting, aviation, hydrology, and emergency response use cases.
-
----
-
-### **2. Access Mechanisms**
+### **2. Access mechanisms**
 
 Radar data must be provided through:
 
@@ -54,19 +49,14 @@ Radar data must be provided through:
 This ensures both:
 
 * automated, real-time access, and
-* efficient retrieval of large historical datasets .
+* efficient retrieval of large historical datasets 
 
----
-
-### **3. Data Formats**
+### **3. Data formats**
 
 Radar data must be published in **open, machine-readable formats**, specifically including:
 
 * **HDF5**
-* **BUFR**
-* **GRIB** (or NetCDF as an alternative)
-
-Other internationally recognised open formats are also acceptable, provided they are well documented .
+* **BUFR** (old data format for the archived data)
 
 ---
 
