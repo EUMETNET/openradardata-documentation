@@ -89,6 +89,30 @@ High-Value Datasets must be provided **free of charge**, unless a temporary exem
 
 ## Compliance of ORD API data and product supply with the HVD scope and requirements?
 
+The [datasets in ORD](https://github.com/EUMETNET/openradardata-documentation/blob/main/docs/2-ORD-API-discovering-and-accessing-data.md) are:
+
+1. EUMETNET OPERA single-site radar data
+
+* 24-hour rolling cache, with a long-term archive (2012–, TBD)
+* Formats: BUFR (older) and ODIM HDF5 (recent)
+* License: CC BY 4.0 (with exceptions noted in metadata)
+* Currently mainly includes:
+DBZH (Doppler-filtered horizontal reflectivity factor, with national QC applied)
+TH (unfiltered horizontal reflectivity factor)
+VRADH (horizontal radial velocity)
+Basic dual-pol variables (e.g. correlation coefficient, differential reflectivity, differential phase shift, specific differential phase) are planned to be added from 2027 onwards (TBD)
+2. European OPERA composite products
+
+Products: maximum reflectivity, instantaneous rain rate, 1-hour accumulation
+TBDcoming later)
+Formats: ODIM HDF5 and cloud-optimized GeoTIFF (TBD)
+License: CC BY 4.0
+3. National radar products
+
+Examples of national composites, rain rate composites, accumulations, echo tops
+Access: via links to national interfaces (24h access of links)
+Formats: ODIM HDF5 or cloud-optimized GeoTIFF
+
 
 ---
 
