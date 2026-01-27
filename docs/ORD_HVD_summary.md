@@ -101,59 +101,43 @@ The [datasets in ORD](https://github.com/EUMETNET/openradardata-documentation/bl
      * TH (unfiltered horizontal reflectivity factor)
      * VRADH (horizontal radial velocity)
 
-:heavy_exclamation_mark: **Noting**
+:heavy_exclamation_mark: **Noting ORD API supply differences to HVD**
  * **Dual-polarisation variables:** Core dual-polarisation radar variables (e.g. correlation coefficient, differential reflectivity, differential phase shift, specific differential phase) are currently not exchanged within the EUMETNET OPERA data flow. As a result, these variables are not available via the ORD API, even though they are listed in the HVD scope. The inclusion of these variables in the OPERA data exchange — and consequently in the ORD API — is planned from 2027 onwards (timeline to be confirmed).
  * **Data quality and processing:** The applied quality control and clutter removal procedures for radar data exchanged through EUMETNET OPERA depend on national processing chains. Therefore, the level and type of data cleaning may vary between countries.
  * **Extended and value-added products:** Additional radar variables and more highly processed products may be available through the national data services of individual National Meteorological Services (NMSs), beyond what is provided via the ORD API.
 
+### 2. European OPERA composite products
 
+* Products: maximum reflectivity, instantaneous rain rate, 1-hour accumulation, real-time (2011 - coming later)
+* Formats: ODIM HDF5 and cloud-optimized GeoTIFF (TBD)
+* License: CC BY 4.0
 
+:heavy_exclamation_mark: **Noting ORD API supply differences to HVD**
+ * **OPERA composite:** OPERA composites are not strickly speaking HVDs, because the Implementation Act is targeted to national public-sector weather radar data and products.
 
+### 3. National radar products
 
+* Examples of national composites, rain rate composites, accumulations, echo tops
+* Access: via links to national interfaces (24h access of links)
+* Formats: ODIM HDF5 or cloud-optimized GeoTIFF
 
+:heavy_exclamation_mark: **Noting ORD API supply differences to HVD**
+ * **Radar products:** This service is planned to serve the NMSs to fulfill their HVDs requirement. Some NMSs prefer to use their national interface for the data supply.  
 
+### 4. ODIM (OPERA Data Information Model) 
 
-
-
-2. European OPERA composite products
-
-Products: maximum reflectivity, instantaneous rain rate, 1-hour accumulation
-TBDcoming later)
-Formats: ODIM HDF5 and cloud-optimized GeoTIFF (TBD)
-License: CC BY 4.0
-3. National radar products
-
-Examples of national composites, rain rate composites, accumulations, echo tops
-Access: via links to national interfaces (24h access of links)
-Formats: ODIM HDF5 or cloud-optimized GeoTIFF
-
-
----
-
-
-
+High-Value Datasets (HVDs) under the EU Open Data Directive are required to include specific metadata to ensure that data are Findable, Accessible, Interoperable, and Reusable [**(FAIR)**](https://www.go-fair.org/fair-principles/). The ORD initiative aims to meet these FAIR requirements. To ensure consistent naming, structure, and data representation, the ORD API follows the OPERA Data Information Model [(ODIM)](https://www.eumetnet.eu/wp-content/uploads/2026/01/ODIM_H5_v2.4.2_final.pdf), which is an internationally recognised and widely adopted standard in radar meteorology.
 
 ---
 
 ## Clarifying the terminology in HVDs
-The annex in HVD annex table is inaccurate and here are briefly explained the terminology used in radar meteorology. The used terminology in the current key attributes list (https://glossary.ametsoc.org/).
-
-* Reflectivity factor
-* Backscatter
-* Polarisation variables
-* Precipitation
-* Wind
-* Echotops (echo tops) 
-
-
+Some radar-related terms used in Sections 3.1 and 3.2 of the Annex to the [Implementation Act](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0138&qid=1769496997370) differ from the terminology commonly applied in radar meteorology. The differences are briefly clarified below using terminology aligned with current radar meteorology practice, based on the AMS Glossary of Meteorology (https://glossary.ametsoc.org/)
 
 ### Reflectivity 
 The basic radar variable is actually called radar reflectivity factor, which is stated in units of mm6 m-3 or provided also as dBZ. The radar reflectivity factor is proportional to the reflectivity which again has dimensions of area per unit volume (e.g., cm2m-3, or, more commonly, cm-1 or m-1), however reflectivity is not given as observable of the weather radar.  
 
-
 ### Backscatter
 By definition is the scattering of radiant energy into the hemisphere of space bounded by a plane normal to the direction of the incident radiation and lying on the same side as the incident ray. Presumably here it is meant to describe the backscatter coefficient, i.e., the physical quantity used to describe the backscattering process, are m−1 sr−1 (per meter and steradian). This is a measure of the reflective strength of a radar target, however also here, backscatter coefficient is not given directly as a radar observable, but radar reflectivity factor is the used quantity. Therefore, it is assumed that the two first terms of the key attributes list are describing the same radar observable. 
-
 
 ### Polarization
 Polarization is general term describing the correlation between two orthogonal components of its electric (or, equivalently, magnetic) field for a transverse electromagnetic wave. With respect to weather radar, here it is probably meant, the radar variables that can be measured with dual-polarization radars. Dual-polarization weather radars measure typically with two linear polarizations, orthogonally horizontal and vertical directions. The basic and operationally measured dual-pol radar variables are differential reflectivity Zdr, propagation differential phase shift (ϕ_dp), and co-polar correlation coefficient (ρ_hv), but there are also other dual-pol variables. However, it is assumed here that in the list of key attributes should not go to this much of detail, but the term the basic dual-polarization variables could be used to describe these observables.      
