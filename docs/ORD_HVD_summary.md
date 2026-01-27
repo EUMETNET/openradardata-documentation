@@ -1,7 +1,7 @@
 # 1. High-Value Datasets (HVD) and Open Radar Data (ORD): Compliance with the HVD scope and requirements
 
 
-Under (**Commission Implementing Regulation (EU) 2023/138**)[https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0138&qid=1769496997370], weather radar data are explicitly designated as **High-Value Datasets (HVDs)** within the **Meteorological** thematic category. This means that public-sector weather radar data must be made openly available under harmonised technical and legal conditions to maximise reuse, innovation, and cross-border applications .
+Under [**Commission Implementing Regulation (EU) 2023/138**](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0138&qid=1769496997370), weather radar data are explicitly designated as **High-Value Datasets (HVDs)** within the **Meteorological** thematic category. This means that public-sector weather radar data must be made openly available under harmonised technical and legal conditions to maximise reuse, innovation, and cross-border applications .
 
 For radar data providers (e.g. national meteorological services), this is not just about openness — it sets **concrete requirements on formats, timeliness, access mechanisms, metadata, and licensing**.
 Data must be free of charge, provided via APIs (with bulk download options), and licensed under open, machine-readable terms (e.g., Creative Commons BY 4.0).
