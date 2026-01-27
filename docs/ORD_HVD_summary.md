@@ -8,7 +8,7 @@ Data must be free of charge, provided via APIs (with bulk download options), and
 
 ---
 
-## What radar data and products must be provided?
+## What radar data and products must be provided as HVDs?
 
 ### **Scope**
 
@@ -19,14 +19,13 @@ Radar datasets must include:
 
 ### **Required radar variables**
 
-The regulation explicitly lists the following radar products and parameters:
+The regulation explicitly lists the following radar products and parameters (modified terminology):
 
-* Reflectivity
-* Backscatter
-* Polarisation variables
-* Precipitation
-* Wind
-* Echotops (echo tops) 
+* Radar reflectivity factor
+* Dual - polarisation variables
+* Precipitation rate and accumulated precipitation 
+* Radial velocity 
+* Echo tops
 
 This implies that **both single-site and composite radar products**, including polarimetric information, fall under the HVD obligation.
 
@@ -142,6 +141,14 @@ This significantly lowers barriers for:
 
 
 ---
+
+* Reflectivity factor
+* Backscatter
+* Polarisation variables
+* Precipitation
+* Wind
+* Echotops (echo tops) 
+
 
 ## Clarifying the terminology in HVDs
 The annex in HVD annex table is inaccurate and here are briefly explained the terminology used in radar meteorology. The used terminology in the current key attributes list (https://glossary.ametsoc.org/).
