@@ -91,16 +91,20 @@ High-Value Datasets must be provided **free of charge**, unless a temporary exem
 
 The [datasets in ORD](https://github.com/EUMETNET/openradardata-documentation/blob/main/docs/2-ORD-API-discovering-and-accessing-data.md) are:
 
-1. EUMETNET OPERA single-site radar data
+### 1. EUMETNET OPERA single-site radar data
 
 * 24-hour rolling cache, with a long-term archive (2012–, TBD)
 * Formats: BUFR (older) and ODIM HDF5 (recent)
 * License: CC BY 4.0 (with exceptions noted in metadata)
 * Currently mainly includes:
-DBZH (Doppler-filtered horizontal reflectivity factor, with national QC applied)
-TH (unfiltered horizontal reflectivity factor)
-VRADH (horizontal radial velocity)
-Basic dual-pol variables (e.g. correlation coefficient, differential reflectivity, differential phase shift, specific differential phase) are planned to be added from 2027 onwards (TBD)
+     * DBZH (Doppler-filtered horizontal reflectivity factor, with national QC applied)
+     * TH (unfiltered horizontal reflectivity factor)
+     * VRADH (horizontal radial velocity)
+
+### Noting
+ * Basic dual-pol variables (e.g. correlation coefficient, differential reflectivity, differential phase shift, specific differential phase) are not exchanged in OPERA, therefore some variables are missing from the HVD requirements. These are planned to be added from 2027 onwards (TBD) in OPERA data flow. 
+
+
 2. European OPERA composite products
 
 Products: maximum reflectivity, instantaneous rain rate, 1-hour accumulation
