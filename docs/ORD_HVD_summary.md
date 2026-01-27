@@ -101,8 +101,18 @@ The [datasets in ORD](https://github.com/EUMETNET/openradardata-documentation/bl
      * TH (unfiltered horizontal reflectivity factor)
      * VRADH (horizontal radial velocity)
 
-### Noting
- * Basic dual-pol variables (e.g. correlation coefficient, differential reflectivity, differential phase shift, specific differential phase) are not exchanged in OPERA, therefore some variables are missing from the HVD requirements. These are planned to be added from 2027 onwards (TBD) in OPERA data flow. 
+:heavy_exclamation_mark: **Noting**
+ * **Dual-polarisation variables:** Core dual-polarisation radar variables (e.g. correlation coefficient, differential reflectivity, differential phase shift, specific differential phase) are currently not exchanged within the EUMETNET OPERA data flow. As a result, these variables are not available via the ORD API, even though they are listed in the HVD scope. The inclusion of these variables in the OPERA data exchange — and consequently in the ORD API — is planned from 2027 onwards (timeline to be confirmed).
+ * **Data quality and processing:** The applied quality control and clutter removal procedures for radar data exchanged through EUMETNET OPERA depend on national processing chains. Therefore, the level and type of data cleaning may vary between countries.
+ * **Extended and value-added products:** Additional radar variables and more highly processed products may be available through the national data services of individual National Meteorological Services (NMSs), beyond what is provided via the ORD API.
+
+
+
+
+
+
+
+
 
 
 2. European OPERA composite products
