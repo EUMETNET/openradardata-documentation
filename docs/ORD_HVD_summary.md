@@ -1,38 +1,14 @@
 # 1. High-Value Datasets (HVD) and Open Radar Data (ORD): Compliance with the HVD scope and requirements
 
 
-The **Open Radar Data (ORD) API** is designed to fulfill the EU Implementing Regulation (EU) 2023/138 of the EU Open Data Directive (EU) 2019/1024 for the  (High Value Datasets (HVDs))[https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0138&qid=1769496997370] defining the weather radar observations.  
-
-Data must be free of charge, provided via APIs (with bulk download options), and licensed under open, machine-readable terms (e.g., Creative Commons BY 4.0).
-
-Great topic — this regulation is *very* relevant for radar data portals 👍
-Below is a **website-ready summary** focused on **what “High-Value Datasets (HVD)” mean for weather radar data**, with a **clear emphasis on Section 3 (Meteorological) of the Annex**, especially **radar data**. I’ll keep it explanatory rather than legalistic, so it works for informing users.
-
----
-
-## High-Value Datasets (HVD) and Weather Radar Data — What Does It Mean?
-
-Under **Commission Implementing Regulation (EU) 2023/138**, weather radar data are explicitly designated as **High-Value Datasets (HVDs)** within the **Meteorological** thematic category. This means that public-sector weather radar data must be made openly available under harmonised technical and legal conditions to maximise reuse, innovation, and cross-border applications .
+Under (**Commission Implementing Regulation (EU) 2023/138**)[https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0138&qid=1769496997370], weather radar data are explicitly designated as **High-Value Datasets (HVDs)** within the **Meteorological** thematic category. This means that public-sector weather radar data must be made openly available under harmonised technical and legal conditions to maximise reuse, innovation, and cross-border applications .
 
 For radar data providers (e.g. national meteorological services), this is not just about openness — it sets **concrete requirements on formats, timeliness, access mechanisms, metadata, and licensing**.
+Data must be free of charge, provided via APIs (with bulk download options), and licensed under open, machine-readable terms (e.g., Creative Commons BY 4.0).
 
 ---
 
-## What Counts as High-Value Meteorological Data?
-
-The regulation defines five types of meteorological datasets:
-
-* Weather station observations
-* Climate (validated) observations
-* Weather alerts
-* **Radar data**
-* Numerical Weather Prediction (NWP) model data
-
-Weather radar data are therefore **explicitly in scope**, alongside observations and models .
-
----
-
-## What Radar Data Must Be Provided?
+## What Radar data and products must be provided?
 
 ### **Scope**
 
