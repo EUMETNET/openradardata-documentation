@@ -19,7 +19,7 @@ Radar datasets must include:
 
 ### **Required radar variables**
 
-The regulation explicitly lists the following radar products and parameters ([modified terminology](#Clarifying the terminology in HVDs)):
+The regulation explicitly lists the following radar products and parameters ([modified terminology](#Clarifying-the-terminology-in-HVDs)):
 
 * Radar reflectivity factor
 * Dual - polarisation variables
