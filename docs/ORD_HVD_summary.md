@@ -1,10 +1,173 @@
 # 1. Overview
 
-The **Open Radar Data (ORD) API** is designed to fulfill the Implementation Act of providing the weather radar data for open and free supply.  
+The **Open Radar Data (ORD) API** is designed to fulfill the EU Implementing Regulation (EU) 2023/138 of the EU Open Data Directive (EU) 2019/1024 for the  (High Value Datasets (HVDs))[https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0138&qid=1769496997370] defining the weather radar observations.  
+
+Data must be free of charge, provided via APIs (with bulk download options), and licensed under open, machine-readable terms (e.g., Creative Commons BY 4.0).
+
+Great topic — this regulation is *very* relevant for radar data portals 👍
+Below is a **website-ready summary** focused on **what “High-Value Datasets (HVD)” mean for weather radar data**, with a **clear emphasis on Section 3 (Meteorological) of the Annex**, especially **radar data**. I’ll keep it explanatory rather than legalistic, so it works for informing users.
+
+---
+
+## High-Value Datasets (HVD) and Weather Radar Data — What Does It Mean?
+
+Under **Commission Implementing Regulation (EU) 2023/138**, weather radar data are explicitly designated as **High-Value Datasets (HVDs)** within the **Meteorological** thematic category. This means that public-sector weather radar data must be made openly available under harmonised technical and legal conditions to maximise reuse, innovation, and cross-border applications .
+
+For radar data providers (e.g. national meteorological services), this is not just about openness — it sets **concrete requirements on formats, timeliness, access mechanisms, metadata, and licensing**.
+
+---
+
+## What Counts as High-Value Meteorological Data?
+
+The regulation defines five types of meteorological datasets:
+
+* Weather station observations
+* Climate (validated) observations
+* Weather alerts
+* **Radar data**
+* Numerical Weather Prediction (NWP) model data
+
+Weather radar data are therefore **explicitly in scope**, alongside observations and models .
+
+---
+
+## What Radar Data Must Be Provided?
+
+### **Scope**
+
+Radar datasets must include:
+
+* Data **per radar station** within a Member State
+* **National radar composites**, where available
+
+### **Required radar variables**
+
+The regulation explicitly lists the following radar products and parameters:
+
+* Reflectivity
+* Backscatter
+* Polarisation variables
+* Precipitation
+* Wind
+* Echotops (echo tops) 
+
+This implies that **both single-site and composite radar products**, including polarimetric information, fall under the HVD obligation.
+
+---
+
+## Technical Requirements for Radar Data Publication
+
+### **1. Update Frequency & Timeliness**
+
+Radar data must be made available:
+
+* **Near real time**
+* With updates every **5 minutes**, or at the **shortest available interval** 
+
+This is a key requirement for nowcasting, aviation, hydrology, and emergency response use cases.
+
+---
+
+### **2. Access Mechanisms**
+
+Radar data must be provided through:
+
+* **APIs** (Application Programming Interfaces), **and**
+* **Bulk download**
+
+This ensures both:
+
+* automated, real-time access, and
+* efficient retrieval of large historical datasets .
+
+---
+
+### **3. Data Formats**
+
+Radar data must be published in **open, machine-readable formats**, specifically including:
+
+* **HDF5**
+* **BUFR**
+* **GRIB** (or NetCDF as an alternative)
+
+Other internationally recognised open formats are also acceptable, provided they are well documented .
+
+---
+
+### **4. Metadata & Documentation**
+
+Radar datasets must be accompanied by:
+
+* **Complete metadata**, published online in an open, widely used machine-readable format
+* **Public documentation** describing:
+
+  * data structure
+  * semantics
+  * variables and conventions used
+
+The regulation explicitly refers to INSPIRE-aligned documentation as an example of good practice .
+
+---
+
+## Legal Conditions for Reuse
+
+### **Licensing**
+
+Radar HVDs must be made available under:
+
+* **Creative Commons BY 4.0**, or
+* an **equivalent or less restrictive open licence**
+
+This allows **free and unrestricted reuse**, including commercial use, provided attribution is given .
+
+---
+
+### **Cost**
+
+High-Value Datasets must be provided **free of charge**, unless a temporary exemption applies under the Open Data Directive (not typical for meteorological services).
+
+---
+
+## API Quality & Operational Requirements (Applies to All HVDs)
+
+Radar data APIs must also comply with general HVD rules:
+
+* Publicly documented **terms of use**
+* Published **quality-of-service criteria** (availability, capacity, performance)
+* A designated **point of contact** for API users
+* Datasets clearly marked as **“High-Value Dataset”** in their metadata .
+
+---
+
+## What This Means in Practice for Radar Data Users
+
+For users, this regulation ensures that weather radar data across Europe are:
+
+* **Openly licensed and free to use**
+* **Accessible programmatically via APIs**
+* **Available in near real time**
+* **Provided in standard scientific formats**
+* **Comparable and interoperable across countries**
+
+This significantly lowers barriers for:
+
+* research
+* cross-border applications
+* AI and machine learning
+* nowcasting, hydrology, aviation, and climate services.
+
+---
+
+If you want, next I can:
+
+* turn this into **short website sections / FAQs**,
+* write a **“What does this mean for radar users?”** box, or
+* help you map these requirements to **your existing radar data services** (e.g. FMI / NORDRAD context).
 
 ---
 
 ## What are the High Value Dataset requirements for weather radar data 
+
 
 ---
 
