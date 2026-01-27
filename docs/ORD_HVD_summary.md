@@ -1,4 +1,5 @@
-# 1. Overview
+# 1. High-Value Datasets (HVD) and Open Radar Data (ORD): Compliance with the HVD scope and requirements
+
 
 The **Open Radar Data (ORD) API** is designed to fulfill the EU Implementing Regulation (EU) 2023/138 of the EU Open Data Directive (EU) 2019/1024 for the  (High Value Datasets (HVDs))[https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0138&qid=1769496997370] defining the weather radar observations.  
 
@@ -158,11 +159,6 @@ This significantly lowers barriers for:
 
 ---
 
-If you want, next I can:
-
-* turn this into **short website sections / FAQs**,
-* write a **“What does this mean for radar users?”** box, or
-* help you map these requirements to **your existing radar data services** (e.g. FMI / NORDRAD context).
 
 ---
 
