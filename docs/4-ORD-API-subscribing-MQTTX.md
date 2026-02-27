@@ -3,11 +3,13 @@
 This guide explains how to subscribe to an MQTT stream using **MQTTX**, a user-friendly MQTT client for desktop applications. Follow the steps below to set up a connection and start listening to an MQTT topic.
 
 ---
-### Please note: valid until the first weeks of January 2026
+## Please note: ORD API onboarding on MeteoGate is delayed, to access radar data and products whitelisting is recommended.
 
-The **ORD API** is currently in a pre-operational phase. During this period, access to the data can be arranged by whitelisting users’ IP addresses or IP address ranges. Requests should be sent to support.opera[at]eumetnet.eu, and we will enable access accordingly. Please note that response times may be slightly longer during holiday periods.
+Currently, access to data and products via the **ORD API** can be arranged by whitelisting users’ IP addresses or IP address ranges. Requests should be sent to support.opera[at]eumetnet.eu, and access will be enabled accordingly.
 
-Once the onboarding of the ORD API to MeteoGate has been completed, access will be provided via **MeteoGate**, which serves as a one-stop shop for meteorological and hydrological products and data. Further information is available on the MeteoGate website [MeteoGate](https://meteogate.eu/)).
+This procedure was originally established for the pre-operational phase and remains in place due to a delay in onboarding the ORD API to MeteoGate. Please note that the data and product provision itself is fully operational; only the access process has not yet been fully implemented through MeteoGate. In the meantime, users are kindly requested to provide their IP address details for whitelisting in order to access the data. We sincerely apologise for any inconvenience this temporary arrangement may cause and appreciate your understanding. We are actively working on a solution and expect to make the ORD API available via MeteoGate in the coming weeks.
+
+Once onboarding has been completed, access will be provided through **MeteoGate**, which serves as a one-stop shop for meteorological and hydrological products and data. Further information is available on the MeteoGate website:  [MeteoGate](https://meteogate.eu/)).
 
 ---
 
