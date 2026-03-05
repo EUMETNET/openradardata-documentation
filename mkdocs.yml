@@ -14,6 +14,7 @@ theme:
   features:
     - navigation.instant
     - navigation.tabs
+    - navigation.tab.sticky
     - navigation.sections
     - navigation.top
     - toc.integrate
@@ -21,7 +22,8 @@ theme:
     - content.code.copy
 
 nav:
-  - HOME: 1-ORD-API-overview.md
+  - HOME: index.md
+  - 1. OVERVIEW: 1-ORD-API-overview.md
   - 2. DISCOVERING AND ACCESSING DATA: 2-ORD-API-discovering-and-accessing-data.md
   - 3. PUBLISHING DATA: 3-ORD-API-publishing-data.md
   - 4. SUBSCRIBING MQTTX: 4-ORD-API-subscribing-MQTTX.md
