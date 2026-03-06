@@ -72,7 +72,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
      xi. Click the Execution button and the response available. See the ``curl`` example the request url and the response below
 
-        ![ORD Response](docs/Images/ORD_API_location_response.png)
+        ![ORD Response](Images/ORD_API_location_response.png)
 
      xii. Direct meteogate query link:
      
