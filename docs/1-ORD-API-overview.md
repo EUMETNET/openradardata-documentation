@@ -38,9 +38,9 @@ Currently, the **ORD API** store the latest 24-h radar data and products. The ar
 
 ### 1. European single-site volume radar data
 **European single-site volume weather radar** data are available through the EUMETNET OPERA programme, both as a 24-hour rolling cache and as an extensive archive (TBD). The data supply is forwarded directly from the incoming OPERA radar volume data as they are collected from the EUMETNET radar data providers and released with the authorisation of each provider. The data generally include:
-  * unfiltered reflectivity factor (TH)
-  * Doppler-filtered and cleaned reflectivity factor, known as the “best possible” reflectivity (DBZH)
-  * radial velocity data (VRADH)
+  - unfiltered reflectivity factor (TH)
+  - Doppler-filtered and cleaned reflectivity factor, known as the “best possible” reflectivity (DBZH)
+  - radial velocity data (VRADH)
 
 Currently, EUMETNET OPERA **does not exchange dual-polarisation data**. These are planned for inclusion in the coming years within the OPERA data exchange, after which they will also be supplied through the ORD API.
 
