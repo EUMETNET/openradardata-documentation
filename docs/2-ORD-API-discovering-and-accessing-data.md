@@ -140,12 +140,15 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
         i. ``standard_name``: RATE or ACRR or DBZH
 
    - OPERA products:
+     
         i. ``location_id``: 0-\*-\*-OPERA
 
    - Query ODIM format:
+     
         i. ``format``: ODIM
 
    - Composite:
+     
         i. ``method``: comp
 
 <br>
