@@ -123,44 +123,61 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
        ![ORD Response No Content](Images/ORD_API_response_no_content.png)
             
- - Query Radial velocity volumes:
+   - Query Radial velocity volumes:
 
      i. ``standard_name``: VRADH
 
- - Retrieve all Dutch data.
+   - Retrieve all Dutch data.
 
      i. ``location_id``: 0-20010-\*-nl\*
 
 **2. OPERA composite products:**
+
    - Fetch composite product from OPERA production
-        1. ``standard_name``: RATE or ACRR or DBZH
+     
+        i. ``standard_name``: RATE or ACRR or DBZH
 
    - OPERA products:
-        1. ``location_id``: 0-\*-\*-OPERA
+        i. ``location_id``: 0-\*-\*-OPERA
 
    - Query ODIM format:
-        1. ``format``: ODIM
+        i. ``format``: ODIM
 
    - Composite:
-        1. ``method``: comp
+        i. ``method``: comp
 
 **3. Select observation items:**
+
    - Retrieve German sites from boundary box area (-5.5,18.0,72.0,82.1) where raw radar reflectivity data (TH) is available in ODIM format for specific time range (2025-10-13T12:10Z/2025-10-13T12:40Z):
-        1. Open [ORD API](https://radar.meteogate.eu/api/docs) and select: collections/observations/items
-        2. Click to "Try it out" button and set the query parameters:
-        3. ``bbox``: -5.5,18.0,72.0,82.1
-        4. ``datetime``: 2025-10-13T12:10Z/2025-10-13T12:40Z
-        5. ``id``: leave blank
-        6. ``parameter-name``: leave blank, set it below separately (standard_name:level:*:*)
-        7. ``naming_authority``: de.dwd
-        8. ``institution``, ``platform``: leave blank
-        9. ``standard_name``: TH
-        10. ``unit``, ``instrument``, ``level``: leave blank
-        11. ``format``: ODIM,
-        12. ``method``: scan
-        13. ``period``, ``f``: leave blank
-        Result 
-        ```json
+
+       i. Open [ORD API](https://radar.meteogate.eu/api/docs) and select: collections/observations/items
+
+       ii. Click to "Try it out" button and set the query parameters:
+
+       iii. ``bbox``: -5.5,18.0,72.0,82.1
+
+       iv. ``datetime``: 2025-10-13T12:10Z/2025-10-13T12:40Z
+
+       v. ``id``: leave blank
+
+       vi. ``parameter-name``: leave blank, set it below separately (standard_name:level:*:*)
+
+       vii. ``naming_authority``: de.dwd
+
+       viii. ``institution``, ``platform``: leave blank
+
+       ix. ``standard_name``: TH
+
+       x. ``unit``, ``instrument``, ``level``: leave blank
+
+       xi. ``format``: ODIM,
+
+       xii. ``method``: scan
+
+       xiii. ``period``, ``f``: leave blank
+
+         Result 
+          ```json
             {
             "type": "FeatureCollection",
             "features": [
