@@ -26,15 +26,17 @@ Once onboarding has been completed, access will be provided through **MeteoGate*
   - Basic dual-pol variables (e.g. correlation coefficient, differential reflectivity, differential phase shift, specific differential phase) are planned to be added from 2027 onwards (TBD)
 
 **2. European OPERA composite products**
-  * Products: maximum reflectivity, instantaneous rain rate, 1-hour accumulation
-  * TBDcoming later)
-  * Formats: ODIM HDF5 and cloud-optimized GeoTIFF (TBD)
-  * License: CC BY 4.0
+   
+   - Products: maximum reflectivity, instantaneous rain rate, 1-hour accumulation
+   - 24-hour rolling cache, with a long-term archive (2012– )
+   - Formats: ODIM HDF5 and cloud-optimized GeoTIFF (TBD)
+   - License: CC BY 4.0
      
 **3. National radar products**
-  * Examples of national composites, rain rate composites, accumulations, echo tops
-  * Access: via links to national interfaces (24h access of links)
-  * Formats: ODIM HDF5 or cloud-optimized GeoTIFF
+
+  - Examples of national composites, rain rate composites, accumulations, echo tops
+  - Access: via links to national interfaces (24h access of links)
+  - Formats: ODIM HDF5 or cloud-optimized GeoTIFF
 
 ---
 
@@ -43,7 +45,9 @@ Once onboarding has been completed, access will be provided through **MeteoGate*
 The **Open Radar Data API** is ideal for retrieving and integrating radar data into various workflows. Here are some examples:
 
 **1. EUMETNET OPERA single-site volume radar data:**
+
    - Retrieve single site (Hurum, Norway) radar intensity data (DBZH) in ODIM format for specific time range (2025-10-13T12:10Z/2025-10-13T12:40Z) and elevations lower than 5&deg;:
+     
         1. Open [ORD API Swagger UI](https://radar.meteogate.eu/api/docs) and select: collections/observations/localtions/{location_id}
         2. Click to "Try it out" button and set the query parameters:
         3. ``location_id``: 0-20000-0-01498
