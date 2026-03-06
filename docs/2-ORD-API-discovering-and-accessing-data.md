@@ -83,7 +83,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
      
      xiii. ODIM data are downloadable from these links:
         
-            ![ORD Response](Images/ORD_API_location_response_links.png)
+            ![ORD Response Links](Images/ORD_API_location_response_links.png)
 
       xiv. Using [aws](https://aws.amazon.com/cli/) tool
 
