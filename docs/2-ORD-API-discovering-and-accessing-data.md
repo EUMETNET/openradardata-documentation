@@ -20,11 +20,10 @@ Once onboarding has been completed, access will be provided through **MeteoGate*
   - Formats: BUFR (older) and ODIM HDF5 (recent)
   - License: CC BY 4.0 (with exceptions noted in metadata)
   - Currently mainly includes:
-    
-        - DBZH (Doppler-filtered horizontal reflectivity factor, with national QC applied)
-        - TH (unfiltered horizontal reflectivity factor)
-        - VRADH (horizontal radial velocity)
-        - Basic dual-pol variables (e.g. correlation coefficient, differential reflectivity, differential phase shift, specific differential phase) are planned to be added from 2027 onwards (TBD)
+    - DBZH (Doppler-filtered horizontal reflectivity factor, with national QC applied)
+    - TH (unfiltered horizontal reflectivity factor)
+    - VRADH (horizontal radial velocity)
+  - Basic dual-pol variables (e.g. correlation coefficient, differential reflectivity, differential phase shift, specific differential phase) are planned to be added from 2027 onwards (TBD)
 
 **2. European OPERA composite products**
   * Products: maximum reflectivity, instantaneous rain rate, 1-hour accumulation
