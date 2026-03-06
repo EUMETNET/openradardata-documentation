@@ -131,7 +131,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
      i. ``location_id``: 0-20010-\*-nl\*
 
-
+<br>
 
 **2. OPERA composite products:**
 
@@ -148,7 +148,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
    - Composite:
         i. ``method``: comp
 
-
+<br>
 
 **3. Select observation items:**
 
