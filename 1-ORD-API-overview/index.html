@@ -1,0 +1,883 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guidance and instructions for Open Radar Data users">
+      
+      
+        <meta name="author" content="EUMETNET">
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../2-ORD-API-discovering-and-accessing-data/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>1. OVERVIEW - Open Radar Data documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Open Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Open Radar Data documentation" class="md-header__button md-logo" aria-label="Open Radar Data documentation" data-md-component="logo">
+      
+  <img src="../Images/meteogate-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Open Radar Data documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. OVERVIEW
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EUMETNET/openradardata-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  HOME
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1. OVERVIEW
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../2-ORD-API-discovering-and-accessing-data/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  2. DISCOVERING AND ACCESSING DATA
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../3-ORD-API-publishing-data/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  3. PUBLISHING DATA
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../4-ORD-API-subscribing-MQTTX/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  4. SUBSCRIBING MQTTX
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ORD_HVD_summary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  HVD COMPLIANCE SUMMARY
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  GLOSSARY
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Open Radar Data documentation" class="md-nav__button md-logo" aria-label="Open Radar Data documentation" data-md-component="logo">
+      
+  <img src="../Images/meteogate-logo.svg" alt="logo">
+
+    </a>
+    Open Radar Data documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EUMETNET/openradardata-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOME
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. OVERVIEW
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. OVERVIEW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#please-note-ord-api-onboarding-on-meteogate-is-delayed-to-access-radar-data-and-products-whitelisting-is-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Please note: ORD API onboarding on MeteoGate is delayed, to access radar data and products whitelisting is recommended.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#published-datasets-in-ord-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Published datasets in ORD API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Published datasets in ORD API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-european-single-site-volume-radar-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. European single-site volume radar data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-eumetnet-opera-composite-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. EUMETNET OPERA composite products
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-national-radar-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. National radar products
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-opera-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. OPERA Database
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Policy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contacts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supportoperaeumetneteu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        support.opera@eumetnet.eu
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-ORD-API-discovering-and-accessing-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. DISCOVERING AND ACCESSING DATA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-ORD-API-publishing-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. PUBLISHING DATA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-ORD-API-subscribing-MQTTX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. SUBSCRIBING MQTTX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ORD_HVD_summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HVD COMPLIANCE SUMMARY
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GLOSSARY
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="1-overview">1. Overview</h1>
+<p>The <strong>Open Radar Data (ORD) API</strong> is a service, which provides access to EUMETNET OPERA weather radar data and products and to links of a selection of national weather radar products. The <strong>ORD API</strong> enables users to access radar data for visualization, analysis, and integration into other systems.</p>
+<p><strong>ORD API</strong> was developed within the EU- and EUMETNET-funded <a href="https://rodeo-project.eu/">RODEO project</a>, which created a user interface and Application Programming Interfaces (APIs) for accessing meteorological datasets designated as High Value Datasets (HVDs) under the EU Implementing Regulation (EU) 2023/138 of the EU Open Data Directive (EU) 2019/1024. This project is also in line with WMO WIS 2.0 strategy. </p>
+<p>The software <a href="https://radar.meteogate.eu/api/">Open Radar Data API</a> and the related <a href="https://radar.meteogate.eu/ingest/">Open Radar Data Ingest API</a> are located at <a href="https://europeanweather.cloud/">European Weather Cloud</a> (EWC). </p>
+<p>As weather radar data are also classified as HVDs and, accordingly, one of the aims of RODEO is to provide near real-time and archived weather radar observations. The radar data are published both via a message queue using <a href="https://mqtt.org/">MQTT</a> and through <a href="https://ogcapi.ogc.org/edr/">EDR</a> - compliant APIs. Metadata will also be made available via <a href="https://ogcapi.ogc.org/records/">OGC Records</a> APIs. </p>
+<hr />
+<h2 id="please-note-ord-api-onboarding-on-meteogate-is-delayed-to-access-radar-data-and-products-whitelisting-is-recommended">Please note: ORD API onboarding on MeteoGate is delayed, to access radar data and products whitelisting is recommended.</h2>
+<p>Currently, access to data and products via the <strong>ORD API</strong> can be arranged by whitelisting users’ IP addresses or IP address ranges. Requests should be sent to support.opera[at]eumetnet.eu, and access will be enabled accordingly.</p>
+<p>This procedure was originally established for the pre-operational phase and remains in place due to a delay in onboarding the ORD API to MeteoGate. Please note that the data and product provision itself is fully operational; only the access process has not yet been fully implemented through MeteoGate. In the meantime, users are kindly requested to provide their IP address details for whitelisting in order to access the data. We sincerely apologise for any inconvenience this temporary arrangement may cause and appreciate your understanding. We are actively working on a solution and expect to make the ORD API available via MeteoGate in the coming weeks.</p>
+<p>Once onboarding has been completed, access will be provided through <strong>MeteoGate</strong>, which serves as a one-stop shop for meteorological and hydrological products and data. Further information is available on the MeteoGate website:  <a href="https://meteogate.eu/">MeteoGate</a>).</p>
+<hr />
+<h2 id="getting-started">Getting Started</h2>
+<ol>
+<li><a href="../2-ORD-API-discovering-and-accessing-data/">ORD API User Instructions</a></li>
+<li><a href="../4-ORD-API-subscribing-MQTTX/">Subscribe to notification messages</a></li>
+<li>For EUMETNET Members only on data ingestion: <a href="../3-ORD-API-publishing-data/">ORD Ingest API User Instructions</a></li>
+<li>Visit the Swagger UI for the <strong>Open Radar API</strong> (<a href="https://radar.meteogate.eu/api/docs">here</a>) and the <strong>Ingest API</strong> (<a href="https://radar.meteogate.eu/ingest/docs">here</a>) to explore the endpoints and capabilities.</li>
+<li>Public Meteogate API available via <a href="https://api.meteogate.eu/ord/edr">MeteoGate Gateway</a></li>
+<li>The EUMETNET OPERA datasets in 24-cache are available at the S3 Bucket: <a href="https://s3.waw3-1.cloudferro.com/openradar-24h/">ORD S3 24h cache</a></li>
+<li>The EUMETNET OPERA datasets archives are available at the S3 Bucket (TBD): <a href="https://s3.waw3-1.cloudferro.com/openradar-archive/">ORD S3 Archive</a></li>
+</ol>
+<hr />
+<h2 id="published-datasets-in-ord-api">Published datasets in ORD API</h2>
+<p>There are three types of data available via ORD.</p>
+<p>Currently, the <strong>ORD API</strong> store the latest 24-h radar data and products. The archive system will be implemented in later stage (TBD). </p>
+<h3 id="1-european-single-site-volume-radar-data">1. European single-site volume radar data</h3>
+<p><strong>European single-site volume weather radar</strong> data are available through the EUMETNET OPERA programme, both as a 24-hour rolling cache and as an extensive archive (TBD). The data supply is forwarded directly from the incoming OPERA radar volume data as they are collected from the EUMETNET radar data providers and released with the authorisation of each provider. The data generally include:</p>
+<ul>
+<li>unfiltered reflectivity factor (TH)</li>
+<li>Doppler-filtered and cleaned reflectivity factor, known as the “best possible” reflectivity (DBZH)</li>
+<li>radial velocity data (VRADH)</li>
+</ul>
+<p>Currently, EUMETNET OPERA <strong>does not exchange dual-polarisation data</strong>. These are planned for inclusion in the coming years within the OPERA data exchange, after which they will also be supplied through the ORD API.</p>
+<p>The data are provided in <strong>ODIM BUFR</strong> format for older datasets and in <strong>ODIM HDF5</strong> format for more recent ones. Some encoders or links to encoders are planned (TBD), for example <a href="https://github.com/openradar/xradar">xradar</a>. <strong><a href="https://eumetnet.eu/wp-content/uploads/2021/07/ODIM_H5_v2.4.pdf">ODIM</a></strong> data model versions 2.0 to 2.4 have been used, noting that these versions are not always backward compatible.</p>
+<p>It should be noted that scanning strategies, data-processing chains (including thresholds and algorithms), definitions of scan time, spatial and temporal resolution, and file structures vary between OPERA Members, resulting in heterogeneous datasets. Dealiasing of VRADH is not performed consistently at the national level, and is currently not applied centrally within OPERA. Data may be transmitted either as full volumes or on a scan-by-scan basis, with radar variables either combined in a single file or distributed across multiple files.</p>
+<p>Not all OPERA Members are part of the EU and therefore are not bound by the HVD regulation. As a result, not all OPERA Members share their data via the ORD API. In addition, some EU Member States have chosen not to use the ORD API and have instead developed their own interfaces, while others use both the ORD API and their national solutions.</p>
+<h3 id="2-eumetnet-opera-composite-products">2. EUMETNET OPERA composite products</h3>
+<p><strong>OPERA composite products (provided by OPERA production called ODYSSEY, CIRRUS, and NIMBUS)</strong> are available both as a 24-hour rolling cache and as a long-term archive dating back to 2012 (TBD). These products are provided by the EUMETNET OPERA programme in ODIM HDF5 and cloud-optimized GeoTIFF formats (TBD).  The composite products are based on incoming polar scans and volumes of filtered reflectivity. The composites cover the whole of Europe (area: 3,800 × 4,400 km2) in a Lambert Equal Area projection with approx. corner coordinates: (70 N 30 W), (70N 50E), (32N 15W), and (32 N 30E). </p>
+<p>Four quality filters are applied to the OPERA incoming volume data prior to compositing <a href="https://www.mdpi.com/478188">(Saltikoff et al. 2019)</a>. The national radar data providers can choose whether these filters are applied to their radar data.</p>
+<p>There are three products on offer from the OPERA suite of products:</p>
+<p><strong>OPERA Instantaneous Maximum Reflectivity (in dBZ)</strong> </p>
+<ul>
+<li>In the maximum reflectivity composite each composite pixel contains the maximum of all polar cell values of the contributing radars at that location.</li>
+<li>ODYSSEY production 2012-10/2024 and CIRRUS production 07/2024 –</li>
+<li>In ODYSSEY production covering years of 01/2011- 10/2024, the composites are all updated every 15 minutes and issued ca. 15 minutes after data time with 2 x 2 km    resolution. The example image of ODYSSEY maximum reflectivity composite is shown in Figure 1. In the new production (07/2024 -) the CIRRUS products are with higher spatial resolution of 1 x 1 km and update cycle of 5 minutes.</li>
+</ul>
+<p><strong>OPERA Instantaneous Surface Rain rate composite (in mm/h)</strong> </p>
+<ul>
+<li>ODYSSEY production 2012-10/2024 and NIMBUS production 07/2024 -</li>
+<li>In the ODYSSEY rain rate composite, each composite pixel is a weighted average of the valid pixels of the contributing radars, weighted by a quality index, the distance from center of the pixel and an exponential index related to inverse of the beam altitude. Whereas in NIMBUS production the compositing algorithm is based on the lowest elevation angle only.</li>
+<li>Measured reflectivity values are converted to rainfall (mm/h) using the Marshall-Palmer equation.</li>
+</ul>
+<p><strong>OPERA One Hour rainfall Accumulation (in mm)</strong> </p>
+<ul>
+<li>Rainfall accumulation is the sum of the previous four 15-minute rain-rate products.</li>
+<li>ODYSSEY production 2012-10/2024 and NIMBUS production 07/2024 -</li>
+</ul>
+<p>The data sharing model used in OPERA is an in-house developed ODIM (OPERA Data Information Model) both in BUFR and HDF5 for older production, solely HDF5 for the new production. The current ODIM specifications can be found from EUMETNET OPERA weather radar information model for implementation with the HDF5 file format Version 2.41 (ODIM 2.41). </p>
+<h3 id="3-national-radar-products">3. National radar products</h3>
+<p>National radar products, e.g. national radar composites, rain rate composites, accumulation products, and echo tops. These are provided as a link to be downloaded from the national interfaces. This requires radar product providers to supply metadata in JSON format to the ORD API to ensure proper data cataloging and accessibility.</p>
+<p>The datasets are provided in either <strong>HDF5 ODIM</strong> or <strong>Cloud-optimized GeoTIFF (CoG)</strong> formats.  </p>
+<p>Only 24-hour links are provided. Users interested in bulk downloads or longer time series are advised to use the data-sharing interfaces of the respective NMSs.</p>
+<p>Currently shared national products are:</p>
+<p><strong>FMI precipitation accumulation composites of 1h, 3h, 6h, and 24 h (in mm) in CoG format</strong></p>
+<p><strong>KNMI 2D- and 3D -reflectivity composites in HDF5 format</strong> </p>
+<p><strong>Met Norway national reflectivity composites in in CoG format</strong></p>
+<h3 id="4-opera-database">4. OPERA Database</h3>
+<p><strong><a href="https://eumetnet.eu/wp-content/themes/aeron-child/observations-programme/current-activities/opera/database/OPERA_Database/index.html">OPERA Database</a></strong> is manually maintained table by the OPERA radar data providers and by the Croatian Meteorological and Hydrological Service (DHMZ). It is sporadically updated, at least twice a year. The available formats are <strong>json</strong>, <strong>xlsx</strong> and <strong>csv</strong>. </p>
+<hr />
+<h2 id="data-policy">Data Policy</h2>
+<p>In EUMETNET OPERA, volume radar data remains the property of the radar data provider. Therefore, the provider has the authority to define the conditions under which the data can be distributed from OPERA to ORD. Before radar data is ingested into EWC (European Weather Cloud) and stored in S3 buckets, any data without the necessary authorisation is excluded and are not supplied.</p>
+<p>Most OPERA Members have agreed to share their data, with most opting for the CC BY 4.0 license with some exceptions to the used license. </p>
+<p>The property rights of OPERA composite products are held by EUMETNET, which has decided to distribute these products under the CC BY 4.0 license.</p>
+<p>For the national products, the national practices are applied and these should be stated in the metadata. </p>
+<hr />
+<h2 id="contacts">Contacts</h2>
+<h2 id="supportoperaeumetneteu">support.opera@eumetnet.eu</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.tab.sticky", "navigation.sections", "navigation.top", "toc.integrate", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
