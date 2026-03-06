@@ -15,10 +15,11 @@ Once onboarding has been completed, access will be provided through **MeteoGate*
 ### [Data available in ORD API](https://github.com/EUMETNET/openradardata-documentation/blob/main/docs/1-ORD-API-overview.md#published-datasets-in-ord-api)
 
 **1. EUMETNET OPERA single-site radar data**
-   * 24-hour rolling cache, with a long-term archive (2012–, TBD)
-   * Formats: BUFR (older) and ODIM HDF5 (recent)
-   * License: CC BY 4.0 (with exceptions noted in metadata)
-   * Currently mainly includes:
+  
+  - 24-hour rolling cache, with a long-term archive (2012–, TBD)
+  - Formats: BUFR (older) and ODIM HDF5 (recent)
+  - License: CC BY 4.0 (with exceptions noted in metadata)
+  - Currently mainly includes:
         - DBZH (Doppler-filtered horizontal reflectivity factor, with national QC applied)
         - TH (unfiltered horizontal reflectivity factor)
         - VRADH (horizontal radial velocity)
