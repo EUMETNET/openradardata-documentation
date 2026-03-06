@@ -83,7 +83,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
      
      xiii. ODIM data are downloadable from these links:
         
-            ![ORD Response Links](Images/ORD_API_location_response_links.png)
+       ![ORD Response Links](Images/ORD_API_location_response_links.png)
 
       xiv. Using [aws](https://aws.amazon.com/cli/) tool
 
@@ -121,7 +121,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
         
       xvi. If no data for the specified query the response is 204.
 
-            ![ORD Response](Images/ORD_API_response_no_content.png)
+       ![ORD Response No Content](Images/ORD_API_response_no_content.png)
             
  - Query Radial velocity volumes:
 
