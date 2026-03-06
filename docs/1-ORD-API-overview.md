@@ -59,18 +59,21 @@ Four quality filters are applied to the OPERA incoming volume data prior to comp
 There are three products on offer from the OPERA suite of products:
 
 **OPERA Instantaneous Maximum Reflectivity (in dBZ)** 
- * In the maximum reflectivity composite each composite pixel contains the maximum of all polar cell values of the contributing radars at that location.
- * ODYSSEY production 2012-10/2024 and CIRRUS production 07/2024 –
- * In ODYSSEY production covering years of 01/2011- 10/2024, the composites are all updated every 15 minutes and issued ca. 15 minutes after data time with 2 x 2 km    resolution. The example image of ODYSSEY maximum reflectivity composite is shown in Figure 1. In the new production (07/2024 -) the CIRRUS products are with higher spatial resolution of 1 x 1 km and update cycle of 5 minutes.
+
+  - In the maximum reflectivity composite each composite pixel contains the maximum of all polar cell values of the contributing radars at that location.
+  - ODYSSEY production 2012-10/2024 and CIRRUS production 07/2024 –
+  - In ODYSSEY production covering years of 01/2011- 10/2024, the composites are all updated every 15 minutes and issued ca. 15 minutes after data time with 2 x 2 km    resolution. The example image of ODYSSEY maximum reflectivity composite is shown in Figure 1. In the new production (07/2024 -) the CIRRUS products are with higher spatial resolution of 1 x 1 km and update cycle of 5 minutes.
 
 **OPERA Instantaneous Surface Rain rate composite (in mm/h)** 
- * ODYSSEY production 2012-10/2024 and NIMBUS production 07/2024 -
- * In the ODYSSEY rain rate composite, each composite pixel is a weighted average of the valid pixels of the contributing radars, weighted by a quality index, the distance from center of the pixel and an exponential index related to inverse of the beam altitude. Whereas in NIMBUS production the compositing algorithm is based on the lowest elevation angle only.
- * Measured reflectivity values are converted to rainfall (mm/h) using the Marshall-Palmer equation.
+  
+  - ODYSSEY production 2012-10/2024 and NIMBUS production 07/2024 -
+  - In the ODYSSEY rain rate composite, each composite pixel is a weighted average of the valid pixels of the contributing radars, weighted by a quality index, the distance from center of the pixel and an exponential index related to inverse of the beam altitude. Whereas in NIMBUS production the compositing algorithm is based on the lowest elevation angle only.
+  - Measured reflectivity values are converted to rainfall (mm/h) using the Marshall-Palmer equation.
 
 **OPERA One Hour rainfall Accumulation (in mm)** 
- * Rainfall accumulation is the sum of the previous four 15-minute rain-rate products.
- * ODYSSEY production 2012-10/2024 and NIMBUS production 07/2024 -
+  
+  - Rainfall accumulation is the sum of the previous four 15-minute rain-rate products.
+  - ODYSSEY production 2012-10/2024 and NIMBUS production 07/2024 -
 
  The data sharing model used in OPERA is an in-house developed ODIM (OPERA Data Information Model) both in BUFR and HDF5 for older production, solely HDF5 for the new production. The current ODIM specifications can be found from EUMETNET OPERA weather radar information model for implementation with the HDF5 file format Version 2.41 (ODIM 2.41). 
 
