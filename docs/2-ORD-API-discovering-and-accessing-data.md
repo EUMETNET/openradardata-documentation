@@ -47,34 +47,44 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 **1. EUMETNET OPERA single-site volume radar data:**
 
    - Retrieve single site (Hurum, Norway) radar intensity data (DBZH) in ODIM format for specific time range (2025-10-13T12:10Z/2025-10-13T12:40Z) and elevations lower than 5&deg;:
-     
-        1. Open [ORD API Swagger UI](https://radar.meteogate.eu/api/docs) and select: collections/observations/localtions/{location_id}
-        2. Click to "Try it out" button and set the query parameters:
-        3. ``location_id``: 0-20000-0-01498
-        4. ``parameter-name``: leave blank, set it below separately(standard_name:level:*:*)
-        5. ``datetime``: 2025-10-13T12:10Z/2025-10-13T12:40Z
-        6. ``standard_name``: DBZH
-        7. ``level``: ../5.0
-        8. ``format``: ODIM
-        9. ``method``: scan 
-        10. ``duration`` is blank
 
-            ![ORD Query Parameters](Images/ORD_API_location.png)
+     i. Open [ORD API Swagger UI](https://radar.meteogate.eu/api/docs) and select: collections/observations/localtions/{location_id}
 
-        11. Click the Execution button and the response available. See the ``curl`` example the request url and the response below
+     ii. Click to "Try it out" button and set the query parameters:
 
-            ![ORD Response](docs/Images/ORD_API_location_response.png)
+     iii. ``location_id``: 0-20000-0-01498
+        
+     iv. ``parameter-name``: leave blank, set it below separately(standard_name:level:*:*)
+        
+     v. ``datetime``: 2025-10-13T12:10Z/2025-10-13T12:40Z
+        
+     vi. ``standard_name``: DBZH
+        
+     vii. ``level``: ../5.0
 
-        12. Direct meteogate query link:
-        ```
-        https://api.meteogate.eu/ord/edr/collections/observations/locations/0-20000-0-01498?datetime=2025-10-13T12%3A10Z%2F2025-10-13T12%3A40Z&f=CoverageJSON&level=..%2F5.0&format=ODIM
-        ```
-        Note: Update the datetime field within this URL.
+     viii. ``format``: ODIM
 
-        12. ODIM data are downloadable from these links:
+     ix. ``method``: scan 
+
+     x. ``duration`` is blank
+
+        ![ORD Query Parameters](Images/ORD_API_location.png)
+
+     xi. Click the Execution button and the response available. See the ``curl`` example the request url and the response below
+
+        ![ORD Response](docs/Images/ORD_API_location_response.png)
+
+     xii. Direct meteogate query link:
+     ```
+     https://api.meteogate.eu/ord/edr/collections/observations/locations/0-20000-0-01498?datetime=2025-10-13T12%3A10Z%2F2025-10-13T12%3A40Z&f=CoverageJSON&level=..%2F5.0&format=ODIM
+     ```
+       Note: Update the datetime field within this URL.
+
+    xiii. ODIM data are downloadable from these links:
+        
             ![ORD Response](Images/ORD_API_location_response_links.png)
 
-        13. Using [aws](https://aws.amazon.com/cli/) tool
+    xiv. Using [aws](https://aws.amazon.com/cli/) tool
 
             Check the file existing in the S3 bucket:
             ```bash
@@ -90,7 +100,8 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
             ```
         
 
-        14. radar_meta(ODIM attributes) section is below the links:
+    xv. radar_meta(ODIM attributes) section is below the links:
+         
             ```json
                 "metocean:wigosId": "0-20000-0-01498",
                 "metocean:platform_name": "[nohur]",
@@ -107,17 +118,18 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
                     "beamwH": 0.95
                 }
             ```
-        15. If no data for the specified query the response is 204.
+        
+      xvi. If no data for the specified query the response is 204.
 
             ![ORD Response](Images/ORD_API_response_no_content.png)
+            
+ - Query Radial velocity volumes:
 
-        
+   i. ``standard_name``: VRADH
 
-   - Query Radial velocity volumes:
-        1. ``standard_name``: VRADH
+ - Retrieve all Dutch data.
 
-   - Retrieve all Dutch data.
-        1. ``location_id``: 0-20010-\*-nl\*
+   i. ``location_id``: 0-20010-\*-nl\*
 
 **2. OPERA composite products:**
    - Fetch composite product from OPERA production
