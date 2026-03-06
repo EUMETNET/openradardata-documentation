@@ -125,11 +125,11 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
             
  - Query Radial velocity volumes:
 
-   i. ``standard_name``: VRADH
+     i. ``standard_name``: VRADH
 
  - Retrieve all Dutch data.
 
-   i. ``location_id``: 0-20010-\*-nl\*
+     i. ``location_id``: 0-20010-\*-nl\*
 
 **2. OPERA composite products:**
    - Fetch composite product from OPERA production
