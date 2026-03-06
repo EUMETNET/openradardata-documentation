@@ -68,7 +68,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
      x. ``duration`` is blank
 
-        ![ORD Query Parameters](docs/Images/ORD_API_location.png)
+        ![ORD Query Parameters](Images/ORD_API_location.png)
 
      xi. Click the Execution button and the response available. See the ``curl`` example the request url and the response below
 
