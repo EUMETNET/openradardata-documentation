@@ -75,16 +75,17 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
         ![ORD Response](docs/Images/ORD_API_location_response.png)
 
      xii. Direct meteogate query link:
-     ```
-     https://api.meteogate.eu/ord/edr/collections/observations/locations/0-20000-0-01498?datetime=2025-10-13T12%3A10Z%2F2025-10-13T12%3A40Z&f=CoverageJSON&level=..%2F5.0&format=ODIM
-     ```
+     
+       ```
+       https://api.meteogate.eu/ord/edr/collections/observations/locations/0-20000-0-01498?datetime=2025-10-13T12%3A10Z%2F2025-10-13T12%3A40Z&f=CoverageJSON&level=..%2F5.0&format=ODIM
+       ```
        Note: Update the datetime field within this URL.
-
-    xiii. ODIM data are downloadable from these links:
+     
+     xiii. ODIM data are downloadable from these links:
         
             ![ORD Response](Images/ORD_API_location_response_links.png)
 
-    xiv. Using [aws](https://aws.amazon.com/cli/) tool
+      xiv. Using [aws](https://aws.amazon.com/cli/) tool
 
             Check the file existing in the S3 bucket:
             ```bash
@@ -98,9 +99,8 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
             ```bash
             aws s3  cp s3://openradar-24h/2025/10/16/OPERA/COMP/OPERA@20251016T0220@0@DBZH.h5 ./new_local_filename.h5  --endpoint-url https://s3.waw3-1.cloudferro.com/  --no-sign-request
             ```
-        
 
-    xv. radar_meta(ODIM attributes) section is below the links:
+     xv. radar_meta(ODIM attributes) section is below the links:
          
             ```json
                 "metocean:wigosId": "0-20000-0-01498",
