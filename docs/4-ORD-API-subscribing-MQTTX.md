@@ -15,12 +15,43 @@ Once onboarding has been completed, access will be provided through **MeteoGate*
 
 ## MQTT Stream Details
 
+- **Protocol**: `wss://`
+- **Host**: `radar.meteogate.eu`
+- **Port**: `443`
+- **Path**: `/ordmqtt`
+- **SSL/TLS**: `Yes`
+- **Authentication**
+   - **username**: `everyone`
+   - **password**: `everyone`
+- **Topics**: The topics hierarchy is the following: `ORD/naming_authority/wigosId/quantity`. Choose or specify the topic you want to subscribe. 
+   - **Examples**
+      - Subscribe Hurum DBZH data: `ORD/no.met/0-578-0-nohur/DBZH`
+      - Subscribe all Finnish DBZH data: `ORD/fi.fmi/+/DBZH`
+      - Subscribe OPERA accumulated precipitation: `ORD/eu.eumetnet/0-20010-0-OPERA/ACRR`
+      - Subscribe OPERA product: `ORD/eu.eumetnet/#`
+      - Use the wildcard `#` to subscribe to all topics. 
+
+
+### This access mode is deprecated and will be removed in future versions
 - **Protocol**: `mqtt://`
 - **Host**: `radar.meteogate.eu`
 - **Port**: `1883`
 - **SSL/TLS**: Not required (unencrypted connection)
 - **Authentication**: None (anonymous connection, no username or password)
-- **Topics**: Choose or specify the topic you want to subscribe to (e.g., `ORD/no.met`). Use the wildcard `#` to subscribe to all topics.
+
+## WIS 2.0 MQTT Stream Details (Metadata only)
+
+- **Protocol**: `wss://`
+- **Host**: `radar.meteogate.eu`
+- **Port**: `443`
+- **Path**: `/wis2mqtt`
+- **SSL/TLS**: `Yes`
+- **Authentication**
+   - **username**: `everyone`
+   - **password**: `everyone`
+- **Topics**: 
+   - **Metadata**: `origin/a/wis2/eu-eumetnet-weather-radar/metadata/core/weather/experimental/weather-radar`
+   - **Data**: `origin/a/wis2/eu-eumetnet-weather-radar/data/core/weather/experimental/weather-radar`
 
 ---
 
@@ -42,10 +73,12 @@ Once onboarding has been completed, access will be provided through **MeteoGate*
 3. Fill in the connection details:
    - **Client ID**: Provide a unique identifier for your client (e.g., `mqttx_client_1`).
    - **Host**: `radar.meteogate.eu`
-   - **Port**: `1883`
-   - **Protocol**: `MQTT` (not `MQTTS`, as SSL/TLS is not required).
-   - **Username**: Leave this blank (no authentication required).
-   - **Password**: Leave this blank (no authentication required).
+   - **Port**: `443`
+   - **Protocol**: `wss` Secure websocket
+   - **SSL/TLS**: `On`
+   - **Path**: `/ord2mqtt`
+   - **Username**: `everyone`
+   - **Password**: `everyone`
 
 4. Click **Connect** to establish the connection. The status of the connection will change to **Connected** if successful.
 
