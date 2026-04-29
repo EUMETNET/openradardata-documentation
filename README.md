@@ -12,7 +12,7 @@ The ORD API service provides access to EUMETNET OPERA composite products, volume
 
 ## Published Documentation Site
 
-https://api.meteogate.eu/documentation/eu-eumetnet-weather-radar (TBD)
+https://eumetnet.github.io/openradardata-documentation/
 
 ---
 
