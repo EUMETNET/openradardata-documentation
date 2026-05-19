@@ -17,7 +17,7 @@ Once onboarding has been completed, access will be provided through **MeteoGate*
 
 - **Protocol**: `wss://`
 - **Host**: `radar.meteogate.eu`
-- **Port**: `443`
+- **Port**: `8884`
 - **Path**: `/ordmqtt`
 - **SSL/TLS**: `Yes`
 - **Authentication**
@@ -43,7 +43,7 @@ Once onboarding has been completed, access will be provided through **MeteoGate*
 
 - **Protocol**: `wss://`
 - **Host**: `radar.meteogate.eu`
-- **Port**: `443`
+- **Port**: `8884`
 - **Path**: `/wis2mqtt`
 - **SSL/TLS**: `Yes`
 - **Authentication**
@@ -73,7 +73,7 @@ Once onboarding has been completed, access will be provided through **MeteoGate*
 3. Fill in the connection details:
    - **Client ID**: Provide a unique identifier for your client (e.g., `mqttx_client_1`).
    - **Host**: `radar.meteogate.eu`
-   - **Port**: `443`
+   - **Port**: `8884`
    - **Protocol**: `wss` Secure websocket
    - **SSL/TLS**: `On`
    - **Path**: `/ord2mqtt`

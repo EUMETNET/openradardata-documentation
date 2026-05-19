@@ -4,7 +4,7 @@ The **Open Radar Data (ORD) API** is a service, which provides access to EUMETNE
 
 **ORD API** was developed within the EU- and EUMETNET-funded [RODEO project](https://rodeo-project.eu/), which created a user interface and Application Programming Interfaces (APIs) for accessing meteorological datasets designated as High Value Datasets (HVDs) under the EU Implementing Regulation (EU) 2023/138 of the EU Open Data Directive (EU) 2019/1024. This project is also in line with WMO WIS 2.0 strategy. 
 
-The software [Open Radar Data API](https://radar.meteogate.eu/api/) and the related [Open Radar Data Ingest API](https://radar.meteogate.eu/ingest/) are located at [European Weather Cloud](https://europeanweather.cloud/) (EWC). 
+The software [Open Radar Data API](https://api.meteogate.eu/eu-eumetnet-weather-radar/docs) and the related [Open Radar Data Ingest API](https://radar.meteogate.eu/ingest/) are located at [European Weather Cloud](https://europeanweather.cloud/) (EWC). 
 
 As weather radar data are also classified as HVDs and, accordingly, one of the aims of RODEO is to provide near real-time and archived weather radar observations. The radar data are published both via a message queue using [MQTT](https://mqtt.org/) and through [EDR](https://ogcapi.ogc.org/edr/) - compliant APIs. Metadata will also be made available via [OGC Records](https://ogcapi.ogc.org/records/) APIs. 
 
@@ -24,8 +24,8 @@ Once onboarding has been completed, access will be provided through **MeteoGate*
 1. [ORD API User Instructions](2-ORD-API-discovering-and-accessing-data.md)
 2. [Subscribe to notification messages](4-ORD-API-subscribing-MQTTX.md)
 3. For EUMETNET Members only on data ingestion: [ORD Ingest API User Instructions](3-ORD-API-publishing-data.md)
-4. Visit the Swagger UI for the **Open Radar API** ([here](https://radar.meteogate.eu/api/docs)) and the **Ingest API** ([here](https://radar.meteogate.eu/ingest/docs)) to explore the endpoints and capabilities.
-5. Public Meteogate API available via [MeteoGate Gateway](https://api.meteogate.eu/ord/edr)
+4. Visit the Swagger UI for the **Open Radar API** ([here](https://api.meteogate.eu/eu-eumetnet-weather-radar/docs)) and the **Ingest API** ([here](https://radar.meteogate.eu/ingest/docs)) to explore the endpoints and capabilities.
+5. Public Meteogate API available via [MeteoGate Gateway](https://api.meteogate.eu/eu-eumetnet-weather-radar/docs)
 6. The EUMETNET OPERA datasets in 24-cache are available at the S3 Bucket: [ORD S3 24h cache](https://s3.waw3-1.cloudferro.com/openradar-24h/)
 7. The EUMETNET OPERA datasets archives are available at the S3 Bucket (TBD): [ORD S3 Archive](https://s3.waw3-1.cloudferro.com/openradar-archive/)
 
