@@ -29,6 +29,7 @@ This guide is designed for:
 ## Quick Links
 
 - [MeteoGate Gateway (public API)](https://api.meteogate.eu/eu-eumetnet-weather-radar)
+- [ORD Swagger UI (public API)](https://api.meteogate.eu/eu-eumetnet-weather-radar/docs)
 
 ---
 

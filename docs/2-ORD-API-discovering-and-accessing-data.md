@@ -48,7 +48,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
    - Retrieve single site (Hurum, Norway) radar intensity data (DBZH) in ODIM format for specific time range (2025-10-13T12:10Z/2025-10-13T12:40Z) and elevations lower than 5&deg;:
 
-     i. Open [ORD API Swagger UI](https://radar.meteogate.eu/api/docs) and select: collections/observations/localtions/{location_id}
+     i. Open [ORD API Swagger UI](https://api.meteogate.eu/eu-eumetnet-weather-radar/docs) and select: collections/observations/localtions/{location_id}
 
      ii. Click to "Try it out" button and set the query parameters:
 
@@ -77,7 +77,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
      xii. Direct meteogate query link:
      
        ```
-       https://api.meteogate.eu/ord/edr/collections/observations/locations/0-20000-0-01498?datetime=2025-10-13T12%3A10Z%2F2025-10-13T12%3A40Z&f=CoverageJSON&level=..%2F5.0&format=ODIM
+       https://api.meteogate.eu/eu-eumetnet-weather-radar/collections/observations/locations/0-20000-0-01498?datetime=2025-10-13T12%3A10Z%2F2025-10-13T12%3A40Z&f=CoverageJSON&level=..%2F5.0&format=ODIM
        ```
        Note: Update the datetime field within this URL.
      
@@ -157,7 +157,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
    - Retrieve German sites from boundary box area (-5.5,18.0,72.0,82.1) where raw radar reflectivity data (TH) is available in ODIM format for specific time range (2025-10-13T12:10Z/2025-10-13T12:40Z):
 
-       i. Open [ORD API](https://radar.meteogate.eu/api/docs) and select: collections/observations/items
+       i. Open [ORD API](https://api.meteogate.eu/eu-eumetnet-weather-radar/docs) and select: collections/observations/items
 
        ii. Click to "Try it out" button and set the query parameters:
 
@@ -225,7 +225,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
                     "format": "ODIM",
                     "platform_vocabulary": "https://oscar.wmo.int/surface/rest/api/search/station?wigosId=0-20000-0-10339",
                     "method": "scan",
-                    "data": "https://radar.meteogate.eu/api/collectionscollections/observations/locations/0-20000-0-10339?=parameter-name=TH:0.5:point:PT30S"
+                    "data": "https://api.meteogate.eu/eu-eumetnet-weather-radar/collectionscollections/observations/locations/0-20000-0-10339?=parameter-name=TH:0.5:point:PT30S"
                 },
                 "id": "07ea52bf21af5399cbc165982559d2ea"
                 },
@@ -266,7 +266,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
                     "format": "ODIM",
                     "platform_vocabulary": "https://oscar.wmo.int/surface/rest/api/search/station?wigosId=0-20000-0-10410",
                     "method": "point",
-                    "data": "https://radar.meteogate.eu/api/collectionscollections/observations/locations/0-20000-0-10410?=parameter-name=TH:0.5:point:PT30S"
+                    "data": "https://api.meteogate.eu/eu-eumetnet-weather-radar/collectionscollections/observations/locations/0-20000-0-10410?=parameter-name=TH:0.5:point:PT30S"
                 },
                 "id": "126aad398d3e52c3151a5cc5f7a0ffb2"
                 },...
