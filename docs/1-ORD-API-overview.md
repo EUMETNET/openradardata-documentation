@@ -45,7 +45,7 @@ Currently, the **ORD API** store the latest 24-h radar data and products. The ar
 
 Currently, EUMETNET OPERA **does not exchange dual-polarisation data**. These are planned for inclusion in the coming years within the OPERA data exchange, after which they will also be supplied through the ORD API.
 
-The data are provided in **ODIM BUFR** format for older datasets and in **ODIM HDF5** format for more recent ones. Some encoders or links to encoders are planned (TBD), for example [xradar](https://github.com/openradar/xradar). **[ODIM](https://eumetnet.eu/wp-content/uploads/2021/07/ODIM_H5_v2.4.pdf)** data model versions 2.0 to 2.4 have been used, noting that these versions are not always backward compatible.
+The data are provided in **ODIM BUFR** format for older datasets and in **ODIM HDF5** format for more recent ones. Some encoders or links to encoders are planned (TBD), for example [xradar](https://github.com/openradar/xradar). **[ODIM](https://www.eumetnet.eu/wp-content/uploads/2026/01/ODIM_H5_v2.4.2_final.pdf)** data model versions 2.0 to 2.4 have been used, noting that these versions are not always backward compatible.
 
 It should be noted that scanning strategies, data-processing chains (including thresholds and algorithms), definitions of scan time, spatial and temporal resolution, and file structures vary between OPERA Members, resulting in heterogeneous datasets. Dealiasing of VRADH is not performed consistently at the national level, and is currently not applied centrally within OPERA. Data may be transmitted either as full volumes or on a scan-by-scan basis, with radar variables either combined in a single file or distributed across multiple files.
 
