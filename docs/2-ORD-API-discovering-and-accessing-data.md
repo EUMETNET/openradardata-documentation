@@ -25,7 +25,7 @@ Once onboarding has been completed, access will be provided through **MeteoGate*
     - VRADH (horizontal radial velocity)
   - Basic dual-pol variables (e.g. correlation coefficient, differential reflectivity, differential phase shift, specific differential phase) are planned to be added from 2027 onwards (TBD)
 
-**2. European OPERA composite products**
+**2. EUMETNET OPERA composite products**
    
    - Products: maximum reflectivity, instantaneous rain rate, 1-hour accumulation
    - 24-hour rolling cache, with a long-term archive (2012– )
