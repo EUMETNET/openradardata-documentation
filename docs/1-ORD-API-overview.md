@@ -75,7 +75,7 @@ There are three products on offer from the OPERA suite of products:
   - Rainfall accumulation is the sum of the previous four 15-minute rain-rate products.
   - ODYSSEY production 2012-10/2024 and NIMBUS production 07/2024 -
 
- The data sharing model used in OPERA is an in-house developed ODIM (OPERA Data Information Model) both in BUFR and HDF5 for older production, solely HDF5 for the new production. The current ODIM specifications can be found from EUMETNET OPERA weather radar information model for implementation with the HDF5 file format Version 2.41 (ODIM 2.41). 
+ The data sharing model used in OPERA is an in-house developed ODIM (OPERA Data Information Model) both in BUFR and HDF5 for older production, solely HDF5 for the new production. The current ODIM specifications can be found from EUMETNET OPERA weather radar information model for implementation with the HDF5 file format Version 2.42 (ODIM 2.42). 
 
 ### 3. National radar products
 National radar products, e.g. national radar composites, rain rate composites, accumulation products, and echo tops. These are provided as a link to be downloaded from the national interfaces. This requires radar product providers to supply metadata in JSON format to the ORD API to ensure proper data cataloging and accessibility.
