@@ -62,7 +62,7 @@ There are three products on offer from the OPERA suite of products:
 
   - In the maximum reflectivity composite each composite pixel contains the maximum of all polar cell values of the contributing radars at that location.
   - ODYSSEY production 2012-10/2024 and CIRRUS production 07/2024 –
-  - In ODYSSEY production covering years of 01/2011- 10/2024, the composites are all updated every 15 minutes and issued ca. 15 minutes after data time with 2 x 2 km    resolution. The example image of ODYSSEY maximum reflectivity composite is shown in Figure 1. In the new production (07/2024 -) the CIRRUS products are with higher spatial resolution of 1 x 1 km and update cycle of 5 minutes.
+  - In ODYSSEY production covering years of 01/2011- 10/2024, the composites are all updated every 15 minutes and issued ca. 15 minutes after data time with 2 x 2 km resolution. In the new production (07/2024 -) the CIRRUS products are with higher spatial resolution of 1 x 1 km and update cycle of 5 minutes.
 
 **OPERA Instantaneous Surface Rain rate composite (in mm/h)** 
   
