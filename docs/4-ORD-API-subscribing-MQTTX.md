@@ -76,7 +76,7 @@ Once onboarding has been completed, access will be provided through **MeteoGate*
    - **Port**: `8884`
    - **Protocol**: `wss` Secure websocket
    - **SSL/TLS**: `On`
-   - **Path**: `/ord2mqtt`
+   - **Path**: `/ordmqtt`
    - **Username**: `everyone`
    - **Password**: `everyone`
 
