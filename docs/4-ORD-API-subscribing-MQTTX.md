@@ -34,7 +34,7 @@ With this transition, please note the changes in the access point addresses and 
       - Use the wildcard `#` to subscribe to all topics. 
 
 
-### This access mode is deprecated and will be removed in future versions
+### This access mode is deprecated and will be removed by June 30th, 2026.
 - **Protocol**: `mqtt://`
 - **Host**: `radar.meteogate.eu`
 - **Port**: `1883`
