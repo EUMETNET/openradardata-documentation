@@ -15,9 +15,9 @@ With the onboarding completed, access for ORD API will be provided through **Met
 
 With this transition, please note the changes in the access point addresses and notification service port, the following ORD services are now openly available:
 
-•	[ORD API via MeteoGate Gateway](https://api.meteogate.eu/eu-eumetnet-weather-radar)
-•	[ORD API swagger UI](https://api.meteogate.eu/eu-eumetnet-weather-radar/docs)  
-•	[Notification service](https://eumetnet.github.io/openradardata-documentation/4-ORD-API-subscribing-MQTTX/): The MQTT connection parameters have changed: username: everyone, port: 8884
+- [ORD API via MeteoGate Gateway](https://api.meteogate.eu/eu-eumetnet-weather-radar)
+- [ORD API swagger UI](https://api.meteogate.eu/eu-eumetnet-weather-radar/docs)  
+- [Notification service](https://eumetnet.github.io/openradardata-documentation/4-ORD-API-subscribing-MQTTX/): The MQTT connection parameters have changed: username: everyone, port: 8884
 
 ---
 ## Getting Started
