@@ -14,6 +14,7 @@ As weather radar data are also classified as HVDs and, accordingly, one of the a
 With the onboarding completed, access for ORD API will be provided through **MeteoGate**. Further information is available on the MeteoGate website: [MeteoGate](https://meteogate.eu/)).
 
 With this transition, please note the changes in the access point addresses and notification service port, the following ORD services are now openly available:
+
 •	[ORD API via MeteoGate Gateway](https://api.meteogate.eu/eu-eumetnet-weather-radar)
 •	[ORD API swagger UI](https://api.meteogate.eu/eu-eumetnet-weather-radar/docs)  
 •	[Notification service](https://eumetnet.github.io/openradardata-documentation/4-ORD-API-subscribing-MQTTX/): The MQTT connection parameters have changed: username: everyone, port: 8884
