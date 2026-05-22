@@ -35,7 +35,7 @@ This guide is designed for:
 
 ## Access
 
-> **Note:** ORD API onboarding on MeteoGate is currently delayed. Access can be arranged by whitelisting your IP address or IP range. Send requests to **support.opera[at]eumetnet.eu**.
+> **Note:** ORD API onboarding on MeteoGate is finalised on May 20th. Please note the changes in the ORD API address and in MQTT port numbe. The previous whitelisted accesses points will be operational until June 30th**.
 
 ---
 
