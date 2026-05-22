@@ -36,7 +36,7 @@ With this transition, please note the changes in the access point addresses and 
 ## Published datasets in ORD API
 There are three types of data available via ORD.
 
-Currently, the **ORD API** store the latest 24-h radar data and products. The archive system will be implemented in later stage (TBD). 
+Currently, the **ORD API** store the latest 24-h for the radar volume data and for the OPERA products both 24-h and archive are available. The radar volume data archive will be populated in later stage (TBD). 
 
 ### 1. European single-site volume radar data
 **European single-site volume weather radar** data are available through the EUMETNET OPERA programme, both as a 24-hour rolling cache and as an extensive archive (TBD). The data supply is forwarded directly from the incoming OPERA radar volume data as they are collected from the EUMETNET radar data providers and released with the authorisation of each provider. The data generally include:
@@ -54,7 +54,7 @@ It should be noted that scanning strategies, data-processing chains (including t
 Not all OPERA Members are part of the EU and therefore are not bound by the HVD regulation. As a result, not all OPERA Members share their data via the ORD API. In addition, some EU Member States have chosen not to use the ORD API and have instead developed their own interfaces, while others use both the ORD API and their national solutions.
 
 ### 2. EUMETNET OPERA composite products
-**OPERA composite products (provided by OPERA production called ODYSSEY, CIRRUS, and NIMBUS)** are available both as a 24-hour rolling cache and as a long-term archive dating back to 2012 (TBD). These products are provided by the EUMETNET OPERA programme in ODIM HDF5 and cloud-optimized GeoTIFF formats (TBD).  The composite products are based on incoming polar scans and volumes of filtered reflectivity. The composites cover the whole of Europe (area: 3,800 × 4,400 km2) in a Lambert Equal Area projection with approx. corner coordinates: (70 N 30 W), (70N 50E), (32N 15W), and (32 N 30E). 
+**OPERA composite products (provided by OPERA production called ODYSSEY, CIRRUS, and NIMBUS)** are available both as a 24-hour rolling cache and as a long-term archive dating back to 2012. These products are provided by the EUMETNET OPERA programme in ODIM HDF5 and cloud-optimized GeoTIFF formats.  The composite products are based on incoming polar scans and volumes of filtered reflectivity. The composites cover the whole of Europe (area: 3,800 × 4,400 km2) in a Lambert Equal Area projection with approx. corner coordinates: (70 N 30 W), (70N 50E), (32N 15W), and (32 N 30E). 
 
 Four quality filters are applied to the OPERA incoming volume data prior to compositing [(Saltikoff et al. 2019)](https://www.mdpi.com/478188). The national radar data providers can choose whether these filters are applied to their radar data.
 
@@ -77,7 +77,7 @@ There are three products on offer from the OPERA suite of products:
   - Rainfall accumulation is the sum of the previous four 15-minute rain-rate products.
   - ODYSSEY production 2012-10/2024 and NIMBUS production 07/2024 -
 
- The data sharing model used in OPERA is an in-house developed ODIM (OPERA Data Information Model) both in BUFR and HDF5 for older production, solely HDF5 for the new production. The current ODIM specifications can be found from EUMETNET OPERA weather radar information model for implementation with the HDF5 file format Version 2.42 (ODIM 2.42). 
+The data sharing model used in OPERA is an in-house developed ODIM (OPERA Data Information Model) both in BUFR and HDF5 for older production, solely HDF5 for the new production. The current ODIM specifications can be found from EUMETNET OPERA weather radar information model for implementation with the HDF5 file format Version 2.42 (ODIM 2.42). 
 
 ### 3. National radar products
 National radar products, e.g. national radar composites, rain rate composites, accumulation products, and echo tops. These are provided as a link to be downloaded from the national interfaces. This requires radar product providers to supply metadata in JSON format to the ORD API to ensure proper data cataloging and accessibility.
