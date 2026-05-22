@@ -30,7 +30,7 @@ With this transition, please note the changes in the access point addresses and 
    
    - Products: maximum reflectivity, instantaneous rain rate, 1-hour accumulation
    - 24-hour rolling cache, with a long-term archive (2012– )
-   - Formats: ODIM HDF5 and cloud-optimized GeoTIFF (TBD)
+   - Formats: ODIM HDF5 and cloud-optimized GeoTIFF
    - License: CC BY 4.0
      
 **3. National radar products**
