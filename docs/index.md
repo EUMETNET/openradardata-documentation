@@ -35,7 +35,7 @@ This guide is designed for:
 
 ## Access
 
-> **Note:** ORD API onboarding on MeteoGate is finalised on May 20th. Please note the changes in the ORD API address and in MQTT port number. The previous whitelisted accsses points will be operational until June 30th. More infformation can be found in the [newsletter](https://github.com/EUMETNET/openradardata-documentation/raw/main/docs/attachements/ORD_API_newsletter_20052026_vs2.pdf).
+> **Note:** ORD API onboarding on MeteoGate is finalised on May 20th. Please note the changes in the ORD API address and in MQTT port number. The previous whitelisted accsses points will be operational until June 30th. More information can be found in the [newsletter](https://github.com/EUMETNET/openradardata-documentation/raw/main/docs/attachements/ORD_API_newsletter_20052026_vs2.pdf).
 
 ---
 
