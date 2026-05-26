@@ -1,0 +1,1097 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guidance and instructions for Open Radar Data users">
+      
+      
+        <meta name="author" content="EUMETNET">
+      
+      
+      
+        <link rel="prev" href="../4-ORD-API-subscribing-MQTTX/">
+      
+      
+        <link rel="next" href="../glossary/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>HVD COMPLIANCE SUMMARY - Open Radar Data documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Open Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-high-value-datasets-hvd-and-open-radar-data-ord-compliance-with-the-hvd-scope-and-requirements" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Open Radar Data documentation" class="md-header__button md-logo" aria-label="Open Radar Data documentation" data-md-component="logo">
+      
+  <img src="../Images/meteogate-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Open Radar Data documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HVD COMPLIANCE SUMMARY
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EUMETNET/openradardata-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  HOME
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../1-ORD-API-overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1. OVERVIEW
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../2-ORD-API-discovering-and-accessing-data/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  2. DISCOVERING AND ACCESSING DATA
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../3-ORD-API-publishing-data/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  3. PUBLISHING DATA
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../4-ORD-API-subscribing-MQTTX/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  4. SUBSCRIBING MQTTX
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  HVD COMPLIANCE SUMMARY
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  GLOSSARY
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Open Radar Data documentation" class="md-nav__button md-logo" aria-label="Open Radar Data documentation" data-md-component="logo">
+      
+  <img src="../Images/meteogate-logo.svg" alt="logo">
+
+    </a>
+    Open Radar Data documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EUMETNET/openradardata-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOME
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-ORD-API-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. OVERVIEW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-ORD-API-discovering-and-accessing-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. DISCOVERING AND ACCESSING DATA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-ORD-API-publishing-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. PUBLISHING DATA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-ORD-API-subscribing-MQTTX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. SUBSCRIBING MQTTX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HVD COMPLIANCE SUMMARY
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HVD COMPLIANCE SUMMARY
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-radar-data-and-products-must-be-provided-as-hvds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What radar data and products must be provided as HVDs?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What radar data and products must be provided as HVDs?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-radar-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required radar variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-requirements-for-radar-data-publication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical requirements for radar data publication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical requirements for radar data publication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-update-frequency-timeliness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Update Frequency &amp; Timeliness
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-access-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Access mechanisms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-data-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Data formats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-metadata-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Metadata &amp; documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legal-conditions-for-reuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legal conditions for reuse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Legal conditions for reuse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#licensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Licensing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cost
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compliance-of-ord-api-data-and-product-supply-with-the-hvd-scope-and-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compliance of ORD API data and product supply with the HVD scope and requirements?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compliance of ORD API data and product supply with the HVD scope and requirements?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-eumetnet-opera-single-site-radar-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. EUMETNET OPERA single-site radar data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-european-opera-composite-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. European OPERA composite products
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-national-radar-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. National radar products
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-odim-opera-data-information-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. ODIM (OPERA Data Information Model)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clarifying-the-terminology-in-hvds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clarifying the terminology in HVDs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clarifying the terminology in HVDs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflectivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backscatter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backscatter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polarisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Polarisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precipitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Precipitation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wind
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#echo-tops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Echo tops
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GLOSSARY
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="1-high-value-datasets-hvd-and-open-radar-data-ord-compliance-with-the-hvd-scope-and-requirements">1. High-Value Datasets (HVD) and Open Radar Data (ORD): Compliance with the HVD scope and requirements</h1>
+<p>Under <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0138&amp;qid=1769496997370"><strong>Commission Implementing Regulation (EU) 2023/138</strong></a>, weather radar data are explicitly designated as <strong>High-Value Datasets (HVDs)</strong> within the <strong>meteorological</strong> thematic category. This means that public-sector weather radar data and products must be made openly available under harmonised technical and legal conditions to maximise reuse, innovation, and cross-border applications .</p>
+<p>For radar data providers (e.g. National Meteorological Services (NMSs)), this is not just about openness — it sets <strong>concrete requirements on formats, timeliness, access mechanisms, metadata, and licensing</strong>.
+Data must be free of charge, provided via APIs (with bulk download options), and licensed under open, machine-readable terms (e.g., Creative Commons BY 4.0).</p>
+<hr />
+<h2 id="what-radar-data-and-products-must-be-provided-as-hvds">What radar data and products must be provided as HVDs?</h2>
+<h3 id="scope"><strong>Scope</strong></h3>
+<p>Radar datasets must include:</p>
+<ul>
+<li>Data <strong>per radar station</strong> within a Member State</li>
+<li><strong>National radar composites</strong>, where available</li>
+</ul>
+<h3 id="required-radar-variables"><strong>Required radar variables</strong></h3>
+<p>The regulation explicitly lists the following radar products and parameters (<a href="#Clarifying-the-terminology-in-HVDs">modified terminology</a>):</p>
+<ul>
+<li>Radar reflectivity factor</li>
+<li>Dual - polarisation variables</li>
+<li>Precipitation rate and accumulated precipitation </li>
+<li>Radial velocity </li>
+<li>Echo tops</li>
+</ul>
+<p>This implies that <strong>both single-site and composite radar products</strong>, including polarimetric information, fall under the HVD obligation.</p>
+<hr />
+<h2 id="technical-requirements-for-radar-data-publication">Technical requirements for radar data publication</h2>
+<h3 id="1-update-frequency-timeliness"><strong>1. Update Frequency &amp; Timeliness</strong></h3>
+<p>Radar data must be made available:</p>
+<ul>
+<li>With updates every <strong>5 minutes</strong>, or at the <strong>shortest available interval</strong> </li>
+</ul>
+<h3 id="2-access-mechanisms"><strong>2. Access mechanisms</strong></h3>
+<p>Radar data must be provided through:</p>
+<ul>
+<li><strong>APIs</strong> (Application Programming Interfaces), <strong>and</strong></li>
+<li><strong>Bulk download</strong></li>
+</ul>
+<p>This ensures both:</p>
+<ul>
+<li>automated, real-time access, and</li>
+<li>efficient retrieval of large historical datasets </li>
+</ul>
+<h3 id="3-data-formats"><strong>3. Data formats</strong></h3>
+<p>Radar data must be published in <strong>open, machine-readable formats</strong>, specifically including:</p>
+<ul>
+<li><strong>HDF5</strong></li>
+<li><strong>BUFR</strong> (old data format for the archived data)</li>
+</ul>
+<h3 id="4-metadata-documentation"><strong>4. Metadata &amp; documentation</strong></h3>
+<p>Radar datasets must be accompanied by:</p>
+<ul>
+<li><strong>Complete metadata</strong>, published online in an open, widely used machine-readable format</li>
+<li>
+<p><strong>Public documentation</strong> describing:</p>
+</li>
+<li>
+<p>data structure</p>
+</li>
+<li>semantics</li>
+<li>variables and conventions used</li>
+</ul>
+<hr />
+<h2 id="legal-conditions-for-reuse">Legal conditions for reuse</h2>
+<h3 id="licensing"><strong>Licensing</strong></h3>
+<p>Radar HVDs must be made available under:</p>
+<ul>
+<li><strong>Creative Commons BY 4.0</strong>, or</li>
+<li>an <strong>equivalent or less restrictive open licence</strong></li>
+</ul>
+<p>This allows <strong>free and unrestricted reuse</strong>, including commercial use, provided attribution is given .</p>
+<h3 id="cost"><strong>Cost</strong></h3>
+<p>High-Value Datasets must be provided <strong>free of charge</strong>, unless a temporary exemption applies under the Open Data Directive (not typical for meteorological services).</p>
+<hr />
+<h2 id="compliance-of-ord-api-data-and-product-supply-with-the-hvd-scope-and-requirements">Compliance of ORD API data and product supply with the HVD scope and requirements?</h2>
+<p>The <a href="https://github.com/EUMETNET/openradardata-documentation/blob/main/docs/2-ORD-API-discovering-and-accessing-data.md">datasets in ORD</a> are:</p>
+<h3 id="1-eumetnet-opera-single-site-radar-data">1. EUMETNET OPERA single-site radar data</h3>
+<ul>
+<li>24-hour rolling cache, with a long-term archive (2012–, TBD)</li>
+<li>Formats: BUFR (older) and ODIM HDF5 (recent)</li>
+<li>License: CC BY 4.0 (with exceptions noted in metadata)</li>
+<li>Currently mainly includes:<ul>
+<li>DBZH (Doppler-filtered horizontal reflectivity factor, with national QC applied)</li>
+<li>TH (unfiltered horizontal reflectivity factor)</li>
+<li>VRADH (horizontal radial velocity)</li>
+</ul>
+</li>
+</ul>
+<p>:heavy_exclamation_mark: <strong>Noting ORD API supply differences to HVD</strong>
+ * <strong>Dual-polarisation variables:</strong> Core dual-polarisation radar variables (e.g. correlation coefficient, differential reflectivity, differential phase shift, specific differential phase) are currently not exchanged within the EUMETNET OPERA data flow. As a result, these variables are not available via the ORD API, even though they are listed in the HVD scope. The inclusion of these variables in the OPERA data exchange — and consequently in the ORD API — is planned from 2027 onwards (timeline to be confirmed).
+ * <strong>Data quality and processing:</strong> The applied quality control and clutter removal procedures for radar data exchanged through EUMETNET OPERA depend on national processing chains. Therefore, the level and type of data cleaning may vary between countries.
+ * <strong>Extended and value-added products:</strong> Additional radar variables and more highly processed products may be available through the national data services of individual National Meteorological Services (NMSs), beyond what is provided via the ORD API.</p>
+<h3 id="2-european-opera-composite-products">2. European OPERA composite products</h3>
+<ul>
+<li>Products: maximum reflectivity, instantaneous rain rate, 1-hour accumulation, real-time (2011 - coming later)</li>
+<li>Formats: ODIM HDF5 and cloud-optimized GeoTIFF (TBD)</li>
+<li>License: CC BY 4.0</li>
+</ul>
+<p>:heavy_exclamation_mark: <strong>Noting ORD API supply differences to HVD</strong>
+ * <strong>OPERA composite:</strong> OPERA composites are not strickly speaking HVDs, because the Implementation Act is targeted to national public-sector weather radar data and products.</p>
+<h3 id="3-national-radar-products">3. National radar products</h3>
+<ul>
+<li>Examples of national composites, rain rate composites, accumulations, echo tops</li>
+<li>Access: via links to national interfaces (24h access of links)</li>
+<li>Formats: ODIM HDF5 or cloud-optimized GeoTIFF</li>
+</ul>
+<p>:heavy_exclamation_mark: <strong>Noting ORD API supply differences to HVD</strong>
+ * <strong>Radar products:</strong> This service is planned to serve the NMSs to fulfill their HVDs requirement. Some NMSs prefer to use their national interface for the data supply.  </p>
+<h3 id="4-odim-opera-data-information-model">4. ODIM (OPERA Data Information Model)</h3>
+<p>High-Value Datasets (HVDs) under the EU Open Data Directive are required to include specific metadata to ensure that data are Findable, Accessible, Interoperable, and Reusable <a href="https://www.go-fair.org/fair-principles/"><strong>(FAIR)</strong></a>. The ORD initiative aims to meet these FAIR requirements. </p>
+<p>:heavy_exclamation_mark: <strong>Noting ORD API supply differences to HVD</strong>
+To ensure consistent naming, structure, and data representation, the ORD API follows the OPERA Data Information Model <a href="https://www.eumetnet.eu/wp-content/uploads/2026/01/ODIM_H5_v2.4.2_final.pdf"><strong>(ODIM)</strong></a>, which is an internationally recognised and widely adopted standard in radar meteorology.</p>
+<hr />
+<h2 id="clarifying-the-terminology-in-hvds">Clarifying the terminology in HVDs</h2>
+<p>Some radar-related terms used in Sections 3.1 and 3.2 of the Annex to the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0138&amp;qid=1769496997370">Implementation Act</a> differ from the terminology commonly applied in radar meteorology. The differences are briefly clarified below using terminology aligned with current radar meteorology practice, based on the AMS Glossary of Meteorology (https://glossary.ametsoc.org/)</p>
+<h3 id="reflectivity">Reflectivity</h3>
+<p>The basic radar variable is actually called <strong>radar reflectivity factor</strong>, which is stated in units of mm^6^ m^-3^ or provided also as dBZ. The radar reflectivity factor is proportional to the reflectivity which again has dimensions of area per unit volume (e.g., cm^2^m^-3^, or, more commonly, cm^-1^ or m^-1^), however reflectivity is not given as observable of the weather radar.  </p>
+<h3 id="backscatter">Backscatter</h3>
+<p>By definition backscatter is the scattering of radiant energy into the hemisphere of space bounded by a plane normal to the direction of the incident radiation and lying on the same side as the incident ray. Presumably here it is meant to describe the backscatter coefficient, i.e., the physical quantity used to describe the backscattering process, are m^−1^ sr^−1^ (per meter and steradian). This is a measure of the reflective strength of a radar target, however also here, backscatter coefficient is not given directly as a radar observable, but <strong>radar reflectivity factor</strong> is the used quantity. Therefore, it is assumed that the two first terms of the key attributes list are describing the same radar observable. </p>
+<h3 id="polarisation">Polarisation</h3>
+<p>Polarisation is general term describing the correlation between two orthogonal components of its electric (or, equivalently, magnetic) field for a transverse electromagnetic wave. With respect to weather radar, here it is probably meant, the radar variables that can be measured with dual-polarisation radars. Dual-polarisation weather radars measure typically with two linear polarisations, orthogonally horisontal and vertical directions. The basic and operationally measured dual-pol radar variables are <strong>differential reflectivity (Zdr)</strong>, propagation <strong>differential phase shift (ϕ~dp~)</strong>, and <strong>co-polar correlation coefficient (ρ~hv~)</strong>, but there are also other dual-pol variables. However, it is assumed here that in the list of key attributes should not go to this much of detail, but the term the basic <strong>dual-polarisation variables</strong> could be used to describe these observables.      </p>
+<h3 id="precipitation">Precipitation</h3>
+<p>Weather radar doesn’t measure precipitation directly, however the <strong>instantaneous precipitation rate (mm/h)</strong> or <strong>rain rate (mm/h)</strong> can be derived using retrieval algorithm from the measured radar reflectivity factor. Therefore, it is suggested to be described this quantity either as the basic radar product in general terms or as instantaneous precipitation rate (mm/h) or rain rate (mm/h).   </p>
+<h3 id="wind">Wind</h3>
+<p>Weather radar doesn’t measure wind directly, however Doppler radars can observe <strong>radial velocity component</strong> from the hydrometeors or other scatterers in the atmosphere, also known as Doppler velocity. Interpretation of the Doppler velocity depends on the viewing geometry and the kind of target. Clear-air echoes are assumed to move with the wind, so that the Doppler velocity measured at a given location in the atmosphere is equal to the radial component of the wind at that location. Precipitation falls relative to the air, so that the Doppler velocity of a precipitation target is assumed to be the sum of the radial velocity component of the precipitation terminal fall velocity and the radial component of the air motion. To simplify the interpretation, in the list of key attributes the term radial velocity should be used instead of wind. There is also a radar product called <strong>wind profile</strong>, but this is not necessarily computed in all Meteorological Services in Europe and computational algorithms differ nationally. </p>
+<h3 id="echo-tops">Echo tops</h3>
+<p>Echo top is a product based on radar observations and used often in detection of convective storms. Basically, an echo top is a top of an area of precipitation indicated by the radar. This product is created either from a single or multiple radar volume observations. The definition is depended on the used thresholds to define the cloud top as well as from the wavelength and sensitivity of the radar system. There exist several algorithms how this product can be computed. This is not a direct radar observable, nor it is created in all Meteorological Services in Europe and due to the before-mentioned reasons, this quantity is not comparable between the different member states. Hence, it is suggested to <strong>remove this from the list of key attributes</strong>.    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.tab.sticky", "navigation.sections", "navigation.top", "toc.integrate", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
