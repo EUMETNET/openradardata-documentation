@@ -3,7 +3,7 @@
 ---
 ## Please note: ORD API onboarding on MeteoGate is finalised on May 20th, and whitelisting is no longer needed.
 
-With the onboarding completed, access for ORD API will be provided through **MeteoGate**. More information can be found in the [newsletter](https://github.com/EUMETNET/openradardata-documentation/raw/main/docs/attachements/ORD_API_newsletter_20052026_vs2.pdf).
+With the onboarding completed, access for ORD API will be provided through **MeteoGate**. More information can be found in the [newsletter](https://github.com/EUMETNET/openradardata-documentation/raw/main/docs/attachments/ORD_API_newsletter_20052026_vs2.pdf).
 
 With this transition, please note the changes in the access point addresses and notification service port, the following ORD services are now openly available:
 
