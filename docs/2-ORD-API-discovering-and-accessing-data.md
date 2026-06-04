@@ -77,14 +77,14 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
        ![ORD Response Location](Images/ORD_API_location_response.png)
 
-        Note: Check the `x-ratelimit-remaining` value for remaining(anonymous) queries! Get API keys at [Meteogate Developer Portal](https://devportal.meteogate.eu/)
+      Note: Check the `x-ratelimit-remaining` value for remaining(anonymous) queries! Get API keys at [Meteogate Developer Portal](https://devportal.meteogate.eu/)
 
      xii. Direct meteogate query link:
      
        ```
        https://api.meteogate.eu/eu-eumetnet-weather-radar/collections/observations/locations/0-578-0-nohur?datetime=2026-06-04T06%3A10Z%2F2026-06-04T06%3A40Z&f=CoverageJSON&level=..%2F5.0&format=ODIM
        ```
-       Note: Update the datetime field within this URL. 
+      Note: Update the datetime field within this URL. 
      
      xiii. ODIM data are downloadable from these links:
         
