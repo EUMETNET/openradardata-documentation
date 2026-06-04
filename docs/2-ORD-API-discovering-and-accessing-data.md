@@ -47,17 +47,17 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
 **1. EUMETNET OPERA single-site volume radar data:**
 
-   - Retrieve single site (Hurum, Norway) radar intensity data (DBZH) in ODIM format for specific time range (2025-10-13T12:10Z/2025-10-13T12:40Z) and elevations lower than 5&deg;:
+   - Retrieve single site (Hurum, Norway) radar intensity data (DBZH) in ODIM format for specific time range (2026-06-04T06:10Z/2026-06-04T06:40Z) and elevations lower than 5&deg;:
 
      i. Open [ORD API Swagger UI](https://api.meteogate.eu/eu-eumetnet-weather-radar/docs) and select: collections/observations/localtions/{location_id}
 
      ii. Click to "Try it out" button and set the query parameters:
 
-     iii. ``location_id``: 0-20000-0-01498
+     iii. ``location_id``: 0-578-0-nohur
         
      iv. ``parameter-name``: leave blank, set it below separately(standard_name:level:*:*)
         
-     v. ``datetime``: 2025-10-13T12:10Z/2025-10-13T12:40Z
+     v. ``datetime``: 2026-06-04T06:10Z/2026-06-07T06:40Z
         
      vi. ``standard_name``: DBZH
         
@@ -71,16 +71,20 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
        ![ORD Query Parameters Location](Images/ORD_API_location.png)
 
+      Note: Location id is `0-578-0-nohur`, where `578` is the ISO country code of Norway, and `nohur` is a unique ODIM code. You can find the full list of the codes [here](https://github.com/EUMETNET/openradardata-validator/blob/main/src/openradardata_validator/stations/OPERA_RADARS.csv).
+
      xi. Click the Execution button and the response available. See the ``curl`` example the request url and the response below
 
        ![ORD Response Location](Images/ORD_API_location_response.png)
 
+        Note: Check the `x-ratelimit-remaining` value for remaining(anonymous) queries! Get API keys at [Meteogate Developer Portal](https://devportal.meteogate.eu/)
+
      xii. Direct meteogate query link:
      
        ```
-       https://api.meteogate.eu/eu-eumetnet-weather-radar/collections/observations/locations/0-20000-0-01498?datetime=2025-10-13T12%3A10Z%2F2025-10-13T12%3A40Z&f=CoverageJSON&level=..%2F5.0&format=ODIM
+       https://api.meteogate.eu/eu-eumetnet-weather-radar/collections/observations/locations/0-578-0-nohur?datetime=2026-06-04T06%3A10Z%2F2026-06-04T06%3A40Z&f=CoverageJSON&level=..%2F5.0&format=ODIM
        ```
-       Note: Update the datetime field within this URL.
+       Note: Update the datetime field within this URL. 
      
      xiii. ODIM data are downloadable from these links:
         
@@ -90,21 +94,21 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
             Check the file existing in the S3 bucket:
             ```bash
-            aws s3 ls s3://openradar-24h/2025/10/13/NO/nohur/PVOL/   --endpoint-url https://s3.waw3-1.cloudferro.com/  --no-sign-request
+            aws s3 ls s3://openradar-24h/2026/06/04/NO/nohur/PVOL/   --endpoint-url https://s3.waw3-1.cloudferro.com/  --no-sign-request
             ```
             Check the daily OPERA data in the S3 bucket:
             ```bash
-            aws s3 ls s3://openradar-24h/2025/10/16/OPERA/COMP/   --endpoint-url https://s3.waw3-1.cloudferro.com/  --no-sign-request
+            aws s3 ls s3://openradar-24h/2026/04/06/OPERA/COMP/   --endpoint-url https://s3.waw3-1.cloudferro.com/  --no-sign-request
             ```
             Copy file to new_local_filename.h5:
             ```bash
-            aws s3  cp s3://openradar-24h/2025/10/16/OPERA/COMP/OPERA@20251016T0220@0@DBZH.h5 ./new_local_filename.h5  --endpoint-url https://s3.waw3-1.cloudferro.com/  --no-sign-request
+            aws s3  cp s3://openradar-24h/2026/06/04/OPERA/COMP/OPERA@20260604T0220@0@DBZH.h5 ./new_local_filename.h5  --endpoint-url https://s3.waw3-1.cloudferro.com/  --no-sign-request
             ```
 
      xv. radar_meta(ODIM attributes) section is below the links:
          
             ```json
-                "metocean:wigosId": "0-20000-0-01498",
+                "metocean:wigosId": "0-578-0-honur",
                 "metocean:platform_name": "[nohur]",
                 "metocean:format": "ODIM",
                 "metocean:radar_meta": {
@@ -130,7 +134,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
    - Retrieve all Dutch data.
 
-     i. ``location_id``: 0-20010-\*-nl\*
+     i. ``location_id``: 0-528-\*-nl\*
 
 <br>
 
@@ -142,7 +146,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
    - OPERA products:
      
-     i. ``location_id``: 0-\*-\*-OPERA
+     i. ``location_id``: 0-20010-0-OPERA
 
    - Query ODIM format:
      
@@ -156,7 +160,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
 **3. Select observation items:**
 
-   - Retrieve German sites from boundary box area (-5.5,18.0,72.0,82.1) where raw radar reflectivity data (TH) is available in ODIM format for specific time range (2025-10-13T12:10Z/2025-10-13T12:40Z):
+   - Retrieve German sites from boundary box area (-5.5,18.0,72.0,82.1) where raw radar reflectivity data (TH) is available in ODIM format for specific time range (2026-06-04T02:10Z/2026-06-04T02:40Z):
 
        i. Open [ORD API](https://api.meteogate.eu/eu-eumetnet-weather-radar/docs) and select: collections/observations/items
 
@@ -164,7 +168,7 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
        iii. ``bbox``: -5.5,18.0,72.0,82.1
 
-       iv. ``datetime``: 2025-10-13T12:10Z/2025-10-13T12:40Z
+       iv. ``datetime``: 2026-06-04T02:10Z/2026-06-04T02:40Z
 
        v. ``id``: leave blank
 
@@ -186,94 +190,95 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
          Result 
           ```json
-            {
+          {
             "type": "FeatureCollection",
             "features": [
-                {
+              {
                 "type": "Feature",
                 "geometry": {
-                    "type": "scan",
-                    "coordinates": [
-                    9.694533,
-                    52.460083
-                    ]
-                },
-                "properties": {
-                    "summary": "Radar data from OPERA network.",
-                    "license": "https://creativecommons.org/licenses/by/4.0/",
-                    "naming_authority": "de.dwd",
-                    "platform": "0-20000-0-10339",
-                    "platform_name": "[dehnr]",
-                    "standard_name": "TH",
-                    "unit": "%",
-                    "level": 0.5,
-                    "period": "PT30S",
-                    "parameter_name": "TH:0.5:point:PT30S",
-                    "timeseries_id": "07ea52bf21af5399cbc165982559d2ea",
-                    "radar_meta": {
-                    "object": "SCAN",
-                    "elangle": 0.4998779296875,
-                    "nbins": 720,
-                    "rstart": 0,
-                    "rscale": 250,
-                    "nrays": 360,
-                    "a1gate": 100,
-                    "product": "SCAN",
-                    "frequency": 5641692508.103789,
-                    "beamwH": 0.9,
-                    "beamwV": 0.9
-                    },
-                    "format": "ODIM",
-                    "platform_vocabulary": "https://oscar.wmo.int/surface/rest/api/search/station?wigosId=0-20000-0-10339",
-                    "method": "scan",
-                    "data": "https://api.meteogate.eu/eu-eumetnet-weather-radar/collectionscollections/observations/locations/0-20000-0-10339?=parameter-name=TH:0.5:point:PT30S"
-                },
-                "id": "07ea52bf21af5399cbc165982559d2ea"
-                },
-                {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [
+                  "type": "Point",
+                  "coordinates": [
                     6.967111,
-                    51.405649
-                    ]
+                    51.405649,
+                    2.5
+                  ]
                 },
                 "properties": {
-                    "summary": "Radar data from OPERA network.",
-                    "license": "https://creativecommons.org/licenses/by/4.0/",
-                    "naming_authority": "de.dwd",
-                    "platform": "0-20000-0-10410",
-                    "platform_name": "[deess]",
-                    "standard_name": "TH",
-                    "unit": "%",
-                    "level": 0.5,
-                    "period": "PT30S",
-                    "parameter_name": "TH:0.5:point:PT30S",
-                    "timeseries_id": "126aad398d3e52c3151a5cc5f7a0ffb2",
-                    "radar_meta": {
+                  "summary": "Radar data from OPERA network.",
+                  "license": "https://creativecommons.org/licenses/by/4.0/",
+                  "naming_authority": "de.dwd",
+                  "platform": "0-276-0-deess",
+                  "platform_name": "[deess]",
+                  "standard_name": "TH",
+                  "unit": "%",
+                  "level": 2.5,
+                  "period": "PT1M",
+                  "parameter_name": "TH:scan",
+                  "timeseries_id": "008d7bb60bda9936afc1361e8c2003ae",
+                  "radar_meta": {
                     "object": "SCAN",
-                    "elangle": 0.4998779296875,
+                    "elangle": 2.4993896484375,
                     "nbins": 720,
                     "rstart": 0,
                     "rscale": 250,
                     "nrays": 360,
-                    "a1gate": 100,
+                    "a1gate": 80,
                     "product": "SCAN",
                     "frequency": 5606682004.950664,
                     "beamwH": 0.9,
                     "beamwV": 0.9
-                    },
-                    "format": "ODIM",
-                    "platform_vocabulary": "https://oscar.wmo.int/surface/rest/api/search/station?wigosId=0-20000-0-10410",
-                    "method": "point",
-                    "data": "https://api.meteogate.eu/eu-eumetnet-weather-radar/collectionscollections/observations/locations/0-20000-0-10410?=parameter-name=TH:0.5:point:PT30S"
+                  },
+                  "format": "ODIM",
+                  "platform_vocabulary": "https://oscar.wmo.int/surface/rest/api/search/station?wigosId=0-276-0-deess",
+                  "method": "scan",
+                  "data": "https://api.meteogate.eu/eu-eumetnet-weather-radar/collections/observations/locations/0-276-0-deess?parameter-name=TH:scan&level=2.5&format=ODIM"
                 },
-                "id": "126aad398d3e52c3151a5cc5f7a0ffb2"
-                },...
-            ]...
-            }
+                "id": "008d7bb60bda9936afc1361e8c2003ae"
+              },
+              {
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                    8.712933,
+                    49.984745,
+                    5.5
+                  ]
+                },
+                "properties": {
+                  "summary": "Radar data from OPERA network.",
+                  "license": "https://creativecommons.org/licenses/by/4.0/",
+                  "naming_authority": "de.dwd",
+                  "platform": "0-276-0-deoft",
+                  "platform_name": "[deoft]",
+                  "standard_name": "TH",
+                  "unit": "%",
+                  "level": 5.5,
+                  "period": "PT1M",
+                  "parameter_name": "TH:scan",
+                  "timeseries_id": "038fe46ffe011e26536f9e45c88a91b2",
+                  "radar_meta": {
+                    "object": "SCAN",
+                    "elangle": 5.4986572265625,
+                    "nbins": 720,
+                    "rstart": 0,
+                    "rscale": 250,
+                    "nrays": 360,
+                    "a1gate": 54,
+                    "product": "SCAN",
+                    "frequency": 5641692508.103789,
+                    "beamwH": 0.9,
+                    "beamwV": 0.9
+                  },
+                  "format": "ODIM",
+                  "platform_vocabulary": "https://oscar.wmo.int/surface/rest/api/search/station?wigosId=0-276-0-deoft",
+                  "method": "scan",
+                  "data": "https://api.meteogate.eu/eu-eumetnet-weather-radar/collections/observations/locations/0-276-0-deoft?parameter-name=TH:scan&level=5.5&format=ODIM"
+                },
+                "id": "038fe46ffe011e26536f9e45c88a91b2"
+              },...
+                      ]...
+                      }
+      ```
 
-        ```
-        
 
