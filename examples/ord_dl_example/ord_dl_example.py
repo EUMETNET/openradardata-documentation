@@ -31,10 +31,15 @@ os.makedirs(dl_dir, exist_ok=True)
 # ########################## ENV VALUES ####################################
 
 MQTT_BROKER = os.getenv("MQTT_BROKER", "radar.meteogate.eu")
-MQTT_PORT = int(os.getenv("MQTT_PORT", "1883"))
+MQTT_PORT = int(os.getenv("MQTT_PORT", "8884"))
+
+MQTT_USER = os.getenv("MQTT_USER", "everyone")
+MQTT_PASSWORD = os.getenv("MQTT_PASSWORD", "everyone")
+WEBSOCKET_PATH = os.getenv("WEBSOCKET_PATH", "/ordmqtt")
 
 # Examples: eu.eumetnet no.met nl.knmi
-TOPIC = os.getenv("ORD_TOPIC","#")  # all
+# TOPIC = os.getenv("ORD_TOPIC","#")  # all
+TOPIC = os.getenv("ORD_TOPIC","ORD/eu.eumetnet/0-20010-0-OPERA/DBZH/#")  # OPERA DBZH composite
 S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME", "openradar-24h")
 S3_ENDPOINT_URL = os.getenv("S3_ENDPOINT_URL", "https://s3.waw3-1.cloudferro.com/")
 
@@ -146,7 +151,11 @@ def on_message(client, userdata, msg):
 
 
 # Create an MQTT client instance
-client = mqtt.Client()
+client = mqtt.Client(transport="websockets")
+client.username_pw_set(MQTT_USER, MQTT_PASSWORD)
+client.tls_set()
+client.tls_insecure_set(True)
+client.ws_set_options(path=WEBSOCKET_PATH)
 
 # Attach the callbacks
 client.on_connect = on_connect

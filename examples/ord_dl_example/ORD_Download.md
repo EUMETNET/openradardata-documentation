@@ -22,10 +22,13 @@ pip install  -r ./requirements.txt
 |---------------------|------------------------------------|-----------------------|
 | ODIM_DL_DIR         | Download directory for ODIM files  | ./odim_files          |
 | MQTT_BROKER         | MQTT Broker address                | radar.meteogate.eu    |
-| MQTT_PORT           | MQTT Port                          | 1883                  |
+| MQTT_PORT           | MQTT Port                          | 8884                  |
+| MQTT_USER           | MQTT User name                     | everyone              |
+| MQTT_PASSWORD       | MQTT Password                      | everyone              |
+| WEBSOCKET_PATH      | Path                               | /ordmqtt              |
 | S3_BUCKET_NAME      | S3 bucker name                     | openradar-24h         |
 | S3_ENDPOINT_URL     | S3 endpoint url                    | https://s3.waw3-1.cloudferro.com/ |
-| TOPIC               | Topic to subscribe                 | #                     |
+| TOPIC               | Topic to subscribe                 | ORD/eu.eumetnet/OPERA/DBZH        |
 
 
 ## Usage
