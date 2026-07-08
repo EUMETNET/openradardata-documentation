@@ -20,8 +20,18 @@ With this transition, please note the changes in the access point addresses and 
 - [Notification service](https://eumetnet.github.io/openradardata-documentation/4-ORD-API-subscribing-MQTTX/): The MQTT connection parameters have changed: username: everyone, port: 8884
 
 ---
-## Getting Started
 
+## Overview
+
+![ORD Overview](Images/ORD_Overview.png)
+
+You have 3 options to use the ORD service:
+
+1. `Person 3`: Use the ORD API via the MeteoGate Gateway in anonymous mode. This is suitable for trying out the ORD service, but it is not recommended for permanent usage because anonymous users have low query limits.
+2. `Customer 1`: Use the ORD API via the MeteoGate Gateway with an API key. This option allows you to query data with a higher rate limit.
+3. `User 2`: Subscribe to a topic(s) in the Notification Service. You will receive notification messages (in JSON format) immediately, containing links to the data. This is the most efficient way to access the data.
+
+## Getting Started
 
 1. [ORD API User Instructions](2-ORD-API-discovering-and-accessing-data.md)
 2. [Subscribe to notification messages](4-ORD-API-subscribing-MQTTX.md)
