@@ -158,15 +158,15 @@ The **Open Radar Data API** is ideal for retrieving and integrating radar data i
 
    - OPERA DBZH, products between 06:00 and 06:30 UTC, ODIM format(update the ``datetime`` field):
     
-     i. https://api.meteogate.eu/eu-eumetnet-weather-radar/collections/observations/locations/0-20010-0-OPERA?datetime=2026-07-16T06%3A00Z%2F2026-07-16T06%3A30Z&f=CoverageJSON&standard_name=DBZH&format=ODIM
+     i. ```https://api.meteogate.eu/eu-eumetnet-weather-radar/collections/observations/locations/0-20010-0-OPERA?datetime=2026-07-16T06%3A00Z%2F2026-07-16T06%3A30Z&f=CoverageJSON&standard_name=DBZH&format=ODIM```
      
-     ii. S3 link example: https://s3.waw3-1.cloudferro.com/openradar-24h/2026/07/16/OPERA/COMP/OPERA@20260716T0610@0@DBZH.h5
+     ii. S3 link example: ```https://s3.waw3-1.cloudferro.com/openradar-24h/2026/07/16/OPERA/COMP/OPERA@20260716T0610@0@DBZH.h5```
      
   - OPERA Accumulated Rain rate products between 06:00 and 06:30 UTC, ODIM format(update the ``datetime`` field)::
 
-      i. https://api.meteogate.eu/eu-eumetnet-weather-radar/collections/observations/locations/0-20010-0-OPERA?datetime=2026-07-16T06%3A00Z%2F2026-07-16T06%3A30Z&f=CoverageJSON&standard_name=ACRR&format=ODIM
+      i. ```https://api.meteogate.eu/eu-eumetnet-weather-radar/collections/observations/locations/0-20010-0-OPERA?datetime=2026-07-16T06%3A00Z%2F2026-07-16T06%3A30Z&f=CoverageJSON&standard_name=ACRR&format=ODIM```
 
-      ii.  S3 link example: https://s3.waw3-1.cloudferro.com/openradar-24h/2026/07/16/OPERA/COMP/OPERA@20260716T0700@0@ACRR.h5
+      ii.  S3 link example: ```https://s3.waw3-1.cloudferro.com/openradar-24h/2026/07/16/OPERA/COMP/OPERA@20260716T0700@0@ACRR.h5```
 
       iii. The API uses the start time of the accumulation interval as the query reference time. However, the object key (file name) in the S3 bucket uses the end of the accumulation interval as its reference time. For example, the file OPERA@20260716T0700@0@ACRR.h5 corresponds to the accumulation interval 06:00–07:00 UTC.
 
