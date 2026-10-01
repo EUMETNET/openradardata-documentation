@@ -1,7 +1,7 @@
 
 ## Data Sharing with ORD Ingest API (For EUMETNET Members only)
 
-The [ORD Ingestion API](https://radar.meteogate.eu/ingest/docs) includes three endpoints for sharing data:
+The [ORD Ingestion API](http://radar.meteogate.eu:8009/docs) includes three endpoints for sharing data. <mark>The address https://radar.meteogate.eu/ingest/doc is no longer available. HTTPS-based data ingestion will soon be available again via a different URL.</mark>
 
 ![Ingest Endpoints](Images/ORD_Ingest_endpoints.png)
 
@@ -40,7 +40,7 @@ Error: ``platform`` missing
 #### Command line ingest:
 ```bash
 curl -X 'POST' \
-  'https://radar.meteogateeu/ingest/json?publishWIS2=false' \
+  'https://radar.meteogate.eu:8009/json?publishWIS2=false' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
