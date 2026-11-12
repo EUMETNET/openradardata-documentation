@@ -24,7 +24,7 @@ API:
 https://radar-backup.meteogate.eu/api
 
 MQTT:
-wss://everyone:everyone@radar-backup.meteogate.eu/ordmqtt
+wss://everyone:everyone@radar-backup.meteogate.eu:443/ordmqtt
 
 S3 endpoint url:
 https://object-store.os-api.cci1.ecmwf.int/openradar-24h-backup
