@@ -14,6 +14,23 @@ With this transition, please note the changes in the access point addresses and 
 - [Notification service](https://eumetnet.github.io/openradardata-documentation/4-ORD-API-subscribing-MQTTX/): The MQTT connection parameters have changed: username: everyone, port: 8884
 
 ---
+## ORD Backup
+
+<mark>We are currently experiencing an issue with our cloud provider. Until the issue is resolved, we have temporarily moved our services to the backup domain: radar-backup.meteogate.eu.</mark>
+
+You can access the services using the following URLs:
+
+API:
+https://radar-backup.meteogate.eu/api
+
+MQTT:
+wss://everyone:everyone@radar-backup.meteogate.eu/ordmqtt
+
+S3 endpoint url:
+https://object-store.os-api.cci1.ecmwf.int/openradar-24h-backup
+
+We apologize for any inconvenience caused and appreciate your understanding.
+
 
 ## MQTT Stream Details
 

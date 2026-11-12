@@ -8,6 +8,25 @@ The software [Open Radar Data API](https://api.meteogate.eu/eu-eumetnet-weather-
 
 As weather radar data are also classified as HVDs and, accordingly, one of the aims of RODEO is to provide near real-time and archived weather radar observations. The radar data are published both via a message queue using [MQTT](https://mqtt.org/) and through [EDR](https://ogcapi.ogc.org/edr/) - compliant APIs. Metadata will also be made available via [OGC Records](https://ogcapi.ogc.org/records/) APIs. 
 
+
+## ORD Backup
+
+<mark>We are currently experiencing an issue with our cloud provider. Until the issue is resolved, we have temporarily moved our services to the backup domain: radar-backup.meteogate.eu.</mark>
+
+You can access the services using the following URLs:
+
+API:
+https://radar-backup.meteogate.eu/api
+
+MQTT:
+wss://everyone:everyone@radar-backup.meteogate.eu/ordmqtt
+
+S3 endpoint url:
+https://object-store.os-api.cci1.ecmwf.int/openradar-24h-backup
+
+We apologize for any inconvenience caused and appreciate your understanding.
+
+
 ---
 ## Please note: ORD API onboarding on MeteoGate is finalised on May 20th, and whitelisting is no longer needed.
 
